@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #rootユーザーで実行
-yum install -y gcc gtk2-devel atk-devel libX11-devel libXt-devel ncurses-devel && \
+yum install -y make gcc gtk2-devel atk-devel libX11-devel libXt-devel ncurses-devel && \
 cd /usr/local/src && \
 git clone https://github.com/vim/vim.git && \
 cd vim && \
