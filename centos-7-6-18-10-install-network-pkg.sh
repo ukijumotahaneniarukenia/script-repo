@@ -6,6 +6,4 @@ iputils \
 lsof \
 net-tools \
 psmisc \
-sudo \
-traceroute \
-tree
+traceroute
