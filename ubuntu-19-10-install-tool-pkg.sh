@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
-
 apt install -y \
+build-essential \
 curl \
-wget \
-git
+gcc \
+git \
+gnupg \
+lsb-release \
+make \
+sudo \
+wget
