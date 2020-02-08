@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 yum install -y \
+R \
 libcurl-devel \
 openssl-devel \
 libxml2-devel \
