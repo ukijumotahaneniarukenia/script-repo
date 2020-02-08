@@ -8,5 +8,4 @@ gnupg \
 lsb-release \
 make \
 unzip \
-sudo \
 wget
