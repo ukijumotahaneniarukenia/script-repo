@@ -17,3 +17,4 @@ echo 'export PATH=$MAVEN_HOME/bin:$PATH' >> ~/.bashrc
 
 echo 'alias pyc="bash /usr/local/src/pycharm-community-2019.3.1/bin/pycharm.sh 1>~/launch-pycharm.log 2>&1 &"' >>~/.bashrc
 echo 'alias idea="/usr/local/src/idea-IC-192.7142.36/bin/idea.sh >~/launch-idea.log 2>&1 &"' >> ~/.bashrc
+echo 'alias myb="mysql-workbench 1>~/launch_mysql-bench.log 2>&1 &"' >>~/.bashrc
