@@ -16,6 +16,8 @@ echo 'export PATH=$STS_HOME:$PATH' >> ~/.bashrc
 echo 'export PATH=$MAVEN_HOME/bin:$PATH' >> ~/.bashrc
 echo 'export PERL5LIB=/home/perl/perl5/lib/perl5:/home/perl/perl5/lib/perl5/x86_64-linux-thread-multi' >> ~/.bashrc
 echo 'export PATH=/usr/local/src/Komodo-Edit-11/bin:$PATH' >> ~/.bashrc
+echo 'export CHROME_HOME=/usr/local/src/chromium-latest-linux/730479'>>~/.bashrc
+echo 'export PATH=$CHROME_HOME/chrome-linux:$PATH'>>~/.bashrc
 
 echo 'alias pyc="bash /usr/local/src/pycharm-community-2019.3.1/bin/pycharm.sh 1>~/launch-pycharm.log 2>&1 &"' >>~/.bashrc
 echo 'alias idea="/usr/local/src/idea-IC-192.7142.36/bin/idea.sh >~/launch-idea.log 2>&1 &"' >> ~/.bashrc
