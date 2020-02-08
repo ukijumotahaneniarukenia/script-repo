@@ -14,3 +14,5 @@ echo 'export PATH=$CATALINA_HOME/bin:$PATH' >> ~/.bashrc
 echo 'export PATH=$JETTY_HOME/bin:$PATH' >> ~/.bashrc
 echo 'export PATH=$STS_HOME:$PATH' >> ~/.bashrc
 echo 'export PATH=$MAVEN_HOME/bin:$PATH' >> ~/.bashrc
+
+echo 'alias pyc="bash /usr/local/src/pycharm-community-2019.3.1/bin/pycharm.sh 1>~/launch_pycharm.log 2>&1 &"' >>~/.bashrc
