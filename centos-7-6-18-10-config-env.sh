@@ -28,3 +28,6 @@ echo 'alias pyc="bash /usr/local/src/pycharm-community-2019.3.1/bin/pycharm.sh 1
 echo 'alias idea="/usr/local/src/idea-IC-192.7142.36/bin/idea.sh >~/launch-idea.log 2>&1 &"' >> ~/.bashrc
 echo 'alias myb="mysql-workbench 1>~/launch-mysql-bench.log 2>&1 &"' >>~/.bashrc
 echo 'alias komo="komodo --verbose 1>~/launch-komodo.log 2>&1 &"' >> ~/.bashrc
+
+
+source ~/.bashrc
