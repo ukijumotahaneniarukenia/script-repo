@@ -7,5 +7,9 @@ git \
 gnupg \
 lsb-release \
 make \
+tree \
 unzip \
 wget
+
+
+echo | apt install -y sudo
