@@ -8,11 +8,9 @@ file \
 gcc \
 gcc-c++ \
 git \
-lbzip \
 lbzip2 \
 libtool \
 make \
-makeinfo \
 moreutils \
 nkf \
 openssh-clients \
@@ -23,4 +21,5 @@ perl-Digest-SHA \
 sudo \
 tree \
 unzip \
-which
+which \
+wget
