@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 yum install -y \
 autoconf \
+bc \
 bison \
 evince \
 expect \
