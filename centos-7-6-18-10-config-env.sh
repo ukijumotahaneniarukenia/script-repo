@@ -4,6 +4,7 @@
 mkdir -p $HOME/.local/bin
 echo 'export PATH=$HOME/.local/bin:$PATH' >>~/.bashrc
 
+echo 'export PATH=/usr/local/src/xml2json:$PATH'>>~/.bashrc
 echo 'export LD_LIBRARY_PATH=/usr/local/lib' >>~/.bashrc
 echo 'export PATH=$PATH:$HOME/.local/bin' >> ~/.bashrc
 echo 'export JAVA_HOME=/usr/local/src/jdk-11' >> ~/.bashrc

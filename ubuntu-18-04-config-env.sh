@@ -5,6 +5,7 @@ mkdir -p $HOME/.local/bin
 echo 'export PATH=$HOME/.local/bin:$PATH' >>~/.bashrc
 
 echo 'export LD_LIBRARY_PATH=/usr/local/lib' >>~/.bashrc
+echo 'export PATH=/usr/local/src/xml2json:$PATH'>>~/.bashrc
 echo 'export JAVA_HOME=/usr/local/src/jdk-11' >> ~/.bashrc
 echo 'export PATH=$JAVA_HOME/bin:$PATH' >> ~/.bashrc
 echo 'export MAVEN_HOME=/usr/local/src/apache-maven-3.6.3'>>~/.bashrc
