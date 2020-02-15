@@ -2,6 +2,7 @@
 yum install -y \
 bzip2-devel \
 gdbm-devel \
+jq \
 libbz2-dev \
 libffi-devel \
 libffi-devpandoc \
