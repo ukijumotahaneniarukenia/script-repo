@@ -18,8 +18,8 @@ echo 'export SWIFT_HOME=/usr/local/src/swift-DEVELOPMENT-SNAPSHOT-2020-01-31-a-u
 echo 'export PATH=$SWIFT_HOME/bin:$PATH' >>$HOME/.bashrc
 echo 'export APACHE_SOLR_HOME=/usr/local/src/solr-8.4.1' >>$HOME/.bashrc
 echo 'export PATH=$APACHE_SOLR_HOME/bin:$PATH' >>$HOME/.bashrc
-echo 'alias pyc="bash /usr/local/src/pycharm-community-2019.3.1/bin/pycharm.sh 1>$HOME/launch_pycharm.log 2>&1 &"' >>$HOME/.bashrc
-echo 'alias qtd="( mkdir -p $HOME/qt-wrksp && export XDG_RUNTIME_DIR=$HOME/qt-wrksp && cd /usr/lib/x86_64-linux-gnu/qt5/bin && ./designer 1>$HOME/launch_qt_designer.log 2>&1 </dev/null & )"' >>$HOME/.bashrc
+echo 'alias pyc="bash /usr/local/src/pycharm-community-2019.3.1/bin/pycharm.sh 1>$HOME/launch-pycharm.log 2>&1 &"' >>$HOME/.bashrc
+echo 'alias qtd="( mkdir -p $HOME/qt-wrksp && export XDG_RUNTIME_DIR=$HOME/qt-wrksp && cd /usr/lib/x86_64-linux-gnu/qt5/bin && ./designer 1>$HOME/launch-qt-designer.log 2>&1 </dev/null & )"' >>$HOME/.bashrc
 
 
 source $HOME/.bashrc
