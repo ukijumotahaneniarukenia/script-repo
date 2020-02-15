@@ -32,4 +32,17 @@ echo 'alias komo="komodo --verbose 1>$HOME/launch-komodo.log 2>&1 &"' >> $HOME/.
 
 echo 'alias repo="cd /usr/local/src/script-repo"' >> $HOME/.bashrc
 
+echo 'alias pyc="bash /usr/local/src/pycharm-community-2019.3.1/bin/pycharm.sh 1>$HOME/launch_pycharm.log 2>&1 &"' >>$HOME/.bashrc
+echo 'alias qtd="( mkdir -p $HOME/qt-wrksp && export XDG_RUNTIME_DIR=$HOME/qt-wrksp && cd /usr/lib/x86_64-linux-gnu/qt5/bin && ./designer 1>$HOME/launch-qt-designer.log 2>&1 </dev/null & )"' >>$HOME/.bashrc
+echo 'export APACHE_SOLR_HOME=/usr/local/src/solr-8.4.1' >>$HOME/.bashrc
+echo 'export GRADLE_HOME=/usr/local/src/gradle-6.1'>>$HOME/.bashrc
+echo 'export PATH=$APACHE_SOLR_HOME/bin:$PATH' >>$HOME/.bashrc
+echo 'export PATH=$GRADLE_HOME/bin:$PATH' >> $HOME/.bashrc
+echo 'export PATH=$SWIFT_HOME/bin:$PATH' >>$HOME/.bashrc
+echo 'export SWIFT_HOME=/usr/local/src/swift-DEVELOPMENT-SNAPSHOT-2020-01-31-a-ubuntu18.04/usr' >>$HOME/.bashrc
+
+
+
+
+
 source $HOME/.bashrc
