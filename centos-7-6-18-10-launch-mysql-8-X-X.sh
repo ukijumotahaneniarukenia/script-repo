@@ -31,3 +31,8 @@ mysql -uroot -pMysql3306 -Dtestdb -e 'source centos-7-6-18-10-confirm-mysql-8-X-
 
 #動作確認
 mysql -uuser01 -pMysql3306 -Dtestdb -e 'source centos-7-6-18-10-confirm-mysql-8-X-X.sql'
+
+#認証方式変更の必要あり
+#https://qiita.com/yusuke_dev/items/7f0ca12ced72363f9448
+#パッチ適用
+mysql -uroot -pMysql3306 -e 'source centos-7-6-18-10-patch-mysql-8-X-X.sql'
