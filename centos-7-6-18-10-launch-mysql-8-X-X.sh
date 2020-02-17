@@ -21,3 +21,13 @@ ps aux
 
 #ログ確認
 tail -n30 /var/log/mysqld.log
+
+
+#mysqlのDDLスクリプトはコメント行を無視してくれないので
+mysql --connect-expired-password -uroot -p$(grep password  /var/log/mysqld.log | cut -d" " -f 13) -e 'source centos-7-6-18-10-launch-mysql-8-X-X.sql'
+
+#動作確認
+mysql -uroot -pMysql3306 -Dtestdb -e 'source centos-7-6-18-10-confirm-mysql-8-X-X.sql'
+
+#動作確認
+mysql -uuser01 -pMysql3306 -Dtestdb -e 'source centos-7-6-18-10-confirm-mysql-8-X-X.sql'
