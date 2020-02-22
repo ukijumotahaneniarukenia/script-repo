@@ -17,4 +17,6 @@ rm -rf /home/postgres/dat
 initdb -D /home/postgres/dat
 
 pg_ctl -D /home/postgres/dat -l /home/postgres/launch-postgres.log start
+
+psql -U postgres -c "create database testdb"
 EOF
