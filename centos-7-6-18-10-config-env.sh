@@ -4,7 +4,8 @@
 mkdir -p $HOME/.local/bin
 echo 'export PATH=$HOME/.local/bin:$PATH' >>$HOME/.bashrc
 echo 'export PATH=/usr/local/bin:$PATH' >>$HOME/.bashrc
-echo 'export PATH=$HOME/.nimble/bin:$PATH' >>~/.bashrc
+echo 'export PATH=$HOME/.nimble/bin:$PATH' >>$HOME/.bashrc
+echo 'export PATH=$HOME/script-sketch/nim/out:$PATH' >>$HOME/.bashrc
 
 echo 'export ELASTICSEARCH_HOME=/usr/share/elasticsearch'>>$HOME/.bashrc
 echo 'export PATH=$ELASTICSEARCH_HOME/bin:$PATH'>>$HOME/.bashrc
