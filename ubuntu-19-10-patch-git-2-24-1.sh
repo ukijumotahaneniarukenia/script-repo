@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-apt install -y \
-  libcurl4-gnutls-dev \
-  libcurl4-openssl-dev
+apt install -y -f libcurl4-gnutls-dev
+apt install -y -f libcurl4-openssl-dev

@@ -1,13 +1,10 @@
 #!/usr/bin/env bash
-
 apt install -y \
-libcurl4-gnutls-dev \
 gcc \
 autoconf \
 asciidoc \
 xmlto \
 gettext \
-libcurl4-openssl-dev \
 libexpat1-dev \
 libssl-dev
 
