@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
-apt install -y libcurl4-gnutls-dev
 
 apt install -y \
+libcurl4-gnutls-dev \
 gcc \
 autoconf \
 asciidoc \
 xmlto \
 gettext \
 libcurl4-openssl-dev \
-libexpat1-dev
+libexpat1-dev \
+libssl-dev
 
 ln -fns /usr/bin/db2x_docbook2texi /usr/bin/docbook2x-texi && \
 cd /usr/local/src && \
