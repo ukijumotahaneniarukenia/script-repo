@@ -2,16 +2,18 @@
 apt install -y \
 gcc \
 autoconf \
-curl-devel \
-expat-devel \
-gettext-devel \
-openssl-devel \
-perl-devel \
-zlib-devel \
+curl-dev \
+expat-dev \
+gettext-dev \
+openssl-dev \
+perl-dev \
+zlib-dev \
 perl-ExtUtils-MakeMaker \
 asciidoc \
 xmlto \
-docbook2X
+docbook2X \
+libcurl4-gnutls-dev \
+libexpat1-dev
 
 ln -fns /usr/bin/db2x_docbook2texi /usr/bin/docbook2x-texi && \
 cd /usr/local/src && \
