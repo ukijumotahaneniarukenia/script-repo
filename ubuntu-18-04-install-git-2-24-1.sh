@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
+apt install -y libcurl4-gnutls-dev
+
 apt install -y \
 gcc \
 autoconf \
 asciidoc \
 xmlto \
-docbook2X \
-libcurl4-gnutls-dev \
 gettext \
 libcurl4-openssl-dev \
 libexpat1-dev
