@@ -27,7 +27,7 @@ find / -name "*pgroonga.so" 2>/dev/null | awk -v DIR=$(pg_config --libdir) '{PRE
 find / -name "*pgroonga.so" 2>/dev/null
 
 #postgresプロセスが使用するダイナミックリンクファイルのエントリディレクトリをシステム単位でキャッシュ作成対象ディレクトリとして認識させる
-echo '/usr/local/lib/postgresql' >/etc/ld.so.conf.d/postgresql.conf
+echo '/usr/local/lib' >/etc/ld.so.conf.d/postgres.conf
 
 #キャッシュ作成
 ldconfig -v
