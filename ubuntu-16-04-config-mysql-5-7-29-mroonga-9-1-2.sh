@@ -13,3 +13,5 @@ ps uax
 tail -n30 /var/log/mysql/error.log
 
 mysql -uroot -p -e "source ubuntu-16-04-config-mysql-5-7-29-mroonga-9-1-2.sql"
+
+mysql -uroot -pMysql3306 </usr/share/mroonga/install.sql

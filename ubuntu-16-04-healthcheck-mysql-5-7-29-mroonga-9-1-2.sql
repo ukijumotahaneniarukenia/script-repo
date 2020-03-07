@@ -26,6 +26,6 @@ insert into tweet_InnoDB(seq,txt)values
 ,( 4,'KdbhVvwlScGFjr0Xu4YnVHFpOgwoPq');
 commit;
 
-SELECT * FROM tweet_mroonga WHERE MATCH(txt) AGAINST("6");
+SELECT * FROM tweet_mroonga WHERE MATCH(txt) AGAINST("4");
 
-SELECT * FROM tweet_InnoDB WHERE MATCH(txt) AGAINST("5");
+SELECT * FROM tweet_InnoDB WHERE MATCH(txt) AGAINST("4");
