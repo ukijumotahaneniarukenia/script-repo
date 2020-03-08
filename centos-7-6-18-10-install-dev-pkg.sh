@@ -13,7 +13,6 @@ libuuid-devel \
 ncurses-devel \
 openssl-devel \
 pcre-devel \
-openssl-devel \
 readline-devel \
 sqlite-devel \
 tk-devel \
