@@ -29,6 +29,7 @@ mysql -uroot -pMysql3306 -Dtestdb -e 'source centos-7-6-18-10-healthcheck-mysql-
 mysql -uuser01 -pMysql3306 -Dtestdb -e 'source centos-7-6-18-10-healthcheck-mysql-8-X-X.sql'
 
 #認証方式変更の必要あり
+#dbeaverから接続する際にこのパッチを適用する必要がある
 #https://qiita.com/yusuke_dev/items/7f0ca12ced72363f9448
 #パッチ適用
-mysql -uroot -pMysql3306 -e 'source centos-7-6-18-10-patch-mysql-8-X-X.sql'
+mysql -uroot -pMysql3306 -e 'source centos-7-6-18-10-post-patch-mysql-8-X-X.sql'
