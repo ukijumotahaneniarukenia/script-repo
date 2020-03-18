@@ -9,3 +9,6 @@ export MAKEFLAGS=-j5 && \
 ./configure --prefix=/usr/local --enable-threads --enable-shared --enable-symbols --enable-64bit --enable-langinfo --enable-man-symlinks && \
 make -j12 && \
 make -j12 install
+
+
+ln -fsr /usr/local/bin/tclsh8.6 /usr/local/bin/tclsh
