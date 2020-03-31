@@ -40,6 +40,8 @@ echo 'export PATH=$APACHE_SOLR_HOME/bin:$PATH' >>$HOME/.bashrc
 echo 'export PATH=$GRADLE_HOME/bin:$PATH' >> $HOME/.bashrc
 echo 'export PATH=$SWIFT_HOME/bin:$PATH' >>$HOME/.bashrc
 echo 'export SWIFT_HOME=/usr/local/src/swift-DEVELOPMENT-SNAPSHOT-2020-01-31-a-ubuntu18.04/usr' >>$HOME/.bashrc
+echo 'export GOSU_HOME=/usr/local/src/gosu-1.14.16' >>$HOME/.bashrc
+echo 'export PATH=$GOSU_HOME/bin:$PATH' >> $HOME/.bashrc
 
 
 
