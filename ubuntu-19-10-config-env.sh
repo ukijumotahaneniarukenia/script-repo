@@ -43,6 +43,8 @@ echo 'export SWIFT_HOME=/usr/local/src/swift-DEVELOPMENT-SNAPSHOT-2020-01-31-a-u
 echo 'export GOSU_HOME=/usr/local/src/gosu-1.14.16' >>$HOME/.bashrc
 echo 'export PATH=$GOSU_HOME/bin:$PATH' >> $HOME/.bashrc
 
+echo 'export SCALA_HOME=/usr/local/src/scala-2.13.1' >>$HOME/.bashrc
+echo 'export PATH=$SCALA_HOME/bin:$PATH' >> $HOME/.bashrc
 
 
 
