@@ -6,3 +6,6 @@ chsh -s /bin/bash nginx && \
 echo 'nginx_pwd' | passwd --stdin nginx && \
 echo 'nginx ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 echo 'root_pwd' | passwd --stdin root
+echo 'root_pwd' | passwd --stdin root
+echo 'root_pwd' | passwd --stdin root
+echo 'root_pwd' | passwd --stdin root

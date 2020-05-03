@@ -6,3 +6,6 @@ chsh -s /bin/bash gitlab && \
 echo 'gitlab:gitlab_pwd' | chpasswd && \
 echo 'gitlab ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 echo 'root:root_pwd' | chpasswd
+echo 'root:root_pwd' | chpasswd
+echo 'root:root_pwd' | chpasswd
+echo 'root:root_pwd' | chpasswd

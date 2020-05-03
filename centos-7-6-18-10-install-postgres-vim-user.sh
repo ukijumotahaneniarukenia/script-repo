@@ -6,3 +6,6 @@ chsh -s /bin/bash postgres && \
 echo 'postgres_pwd' | passwd --stdin postgres && \
 echo 'postgres ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 echo 'root_pwd' | passwd --stdin root
+echo 'root_pwd' | passwd --stdin root
+echo 'root_pwd' | passwd --stdin root
+echo 'root_pwd' | passwd --stdin root

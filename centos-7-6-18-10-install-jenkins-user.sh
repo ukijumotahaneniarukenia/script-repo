@@ -6,3 +6,6 @@ chsh -s /bin/bash jenkins && \
 echo 'jenkins_pwd' | passwd --stdin jenkins && \
 echo 'jenkins ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 echo 'root_pwd' | passwd --stdin root
+echo 'root_pwd' | passwd --stdin root
+echo 'root_pwd' | passwd --stdin root
+echo 'root_pwd' | passwd --stdin root

@@ -11,3 +11,6 @@ chsh -s /bin/bash db2inst1 && \
 echo 'db2inst1_pwd' | passwd --stdin db2inst1 && \
 echo 'db2inst1 ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 echo 'root_pwd' | passwd --stdin root
+echo 'root_pwd' | passwd --stdin root
+echo 'root_pwd' | passwd --stdin root
+echo 'root_pwd' | passwd --stdin root

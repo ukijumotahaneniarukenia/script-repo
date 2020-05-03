@@ -11,3 +11,6 @@ chsh -s /bin/bash shiny && \
 echo 'shiny_pwd' | passwd --stdin shiny && \
 echo 'shiny ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 echo 'root_pwd' | passwd --stdin root
+echo 'root_pwd' | passwd --stdin root
+echo 'root_pwd' | passwd --stdin root
+echo 'root_pwd' | passwd --stdin root

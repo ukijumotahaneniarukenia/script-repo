@@ -6,3 +6,6 @@ chsh -s /bin/bash mssql && \
 echo 'mssql:mssql_pwd' | chpasswd && \
 echo 'mssql ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 echo 'root:root_pwd' | chpasswd
+echo 'root:root_pwd' | chpasswd
+echo 'root:root_pwd' | chpasswd
+echo 'root:root_pwd' | chpasswd
