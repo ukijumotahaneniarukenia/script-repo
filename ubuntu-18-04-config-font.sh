@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+apt install -y fontconfig
 mkdir -p $HOME/.fonts && \
 cd $HOME/.fonts && \
 curl -LO https://github.com/adobe-fonts/source-han-code-jp/archive/2.011.zip && \
