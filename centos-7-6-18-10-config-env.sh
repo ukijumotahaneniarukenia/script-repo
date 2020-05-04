@@ -3,7 +3,6 @@
 #自作コマンド格納ディレクトリ
 mkdir -p $HOME/.local/bin
 echo 'export PATH=$HOME/.local/bin:$PATH' >>$HOME/.bashrc
-echo 'export PATH=/usr/local/bin:$PATH' >>$HOME/.bashrc
 echo 'export PATH=$HOME/.nimble/bin:$PATH' >>$HOME/.bashrc
 echo 'export PATH=$HOME/script-sketch/nim/out:$PATH' >>$HOME/.bashrc
 
@@ -48,6 +47,7 @@ echo 'export SWIFT_HOME=/usr/local/src/swift-DEVELOPMENT-SNAPSHOT-2020-01-31-a-u
 
 
 
+echo 'export PATH=/usr/local/bin:$PATH' >>$HOME/.bashrc
 
 
 source $HOME/.bashrc
