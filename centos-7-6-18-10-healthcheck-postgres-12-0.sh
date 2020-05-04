@@ -13,3 +13,7 @@ pg_ctl -D /home/postgres/dat -l /home/postgres/launch-postgres.log start
 
 psql -U postgres -c "create database testdb"
 EOF
+
+psql -U postgres -d testdb -c 'select version();'
+
+psql -U postgres -d testdb </usr/local/src/script-repo/centos-7-6-18-10-healthcheck-postgres-12-0.sql
