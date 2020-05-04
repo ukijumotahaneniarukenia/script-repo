@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+
+#rootユーザで実行する想定
 su - postgres <<EOF
 
 ps aux | grep -P '/usr/local/bin/postgres -D /home/postgres/dat' | grep -v grep | awk '{print \$2}' | xargs kill -9
