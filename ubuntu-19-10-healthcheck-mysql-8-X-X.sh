@@ -24,10 +24,10 @@ mysqld -D --user=mysql
 ps aux
 
 #ログ確認
-tail -n30 /var/log/mysqld.log
+tail -n30 /var/log/mysql/error.log
 
 #mysqlのDDLスクリプトはコメント行を無視してくれないので
-mysql --connect-expired-password -uroot -p$(grep password  /var/log/mysqld.log | cut -d" " -f 13) -e 'source ubuntu-19-10-config-mysql-8-X-X.sql'
+mysql --connect-expired-password -uroot -p$(grep password  /var/log/mysql/error.log | cut -d" " -f 13) -e 'source ubuntu-19-10-config-mysql-8-X-X.sql'
 
 #動作確認
 mysql -uroot -pMysql3306 -Dtestdb -e 'source ubuntu-19-10-healthcheck-mysql-8-X-X.sql'
