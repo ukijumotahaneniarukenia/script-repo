@@ -8,6 +8,7 @@ make -j12
 make -j12 install
 
 #vscodeでruby-solargraph（コード補完）を使用できるようにするための設定
+#solargraphが2.1以上なので、ここにまとめてかいた
 ruby --version
 gem --version
 gem install solargraph
