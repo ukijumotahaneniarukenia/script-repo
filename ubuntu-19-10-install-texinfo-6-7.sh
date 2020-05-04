@@ -6,4 +6,4 @@ cd texinfo-6.7
 ./configure
 make -j12
 make -j12 install
-which makeinfo #makeinfoコマンドはtextinfoソースに梱包
+which makeinfo #makeinfoコマンドはtexinfoソースに梱包
