@@ -6,3 +6,12 @@ cd ruby-2.7.1
 ./configure
 make -j12
 make -j12 install
+
+#vscodeでruby-solargraph（コード補完）を使用できるようにするための設定
+ruby --version
+gem --version
+gem install solargraph
+gem install rubocop
+solargraph help
+
+#実施後vscodeでruby-solargraphをインストール
