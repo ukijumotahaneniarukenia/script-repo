@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-#apt install -y python-devel
+ln -fsr /usr/local/bin/python3 /usr/bin/python #3系を見に行くようにリンク上書き
+
 #ダイナミックリンクライブラリの整備
 echo "export LD_LIBRARY_PATH=/usr/local/lib" >> ~/.bashrc && source ~/.bashrc
 echo '/usr/local/lib'>>/etc/ld.so.conf.d/local-ld.so.conf
