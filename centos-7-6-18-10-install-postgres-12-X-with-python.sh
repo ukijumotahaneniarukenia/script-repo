@@ -26,12 +26,3 @@ find / -name "*plpython*so*" 2>/dev/null #plpythonダイナミックリンクラ
 ldconfig -p | grep py #キャッシュできているか確認
 
 ldd /usr/pgsql-12/lib/plpython3.so #紐づき確認
-
-cat <<EOS >/home/postgres/.pgsql_profile
-PATH=/usr/pgsql-12/bin:$PATH
-MANPATH=/usr/pgsql-12/share/man:$MANPATH
-PGDATA=/var/lib/pgsql/12/data
-export PATH MANPATH PGDATA
-EOS
-
-source /home/postgres/.pgsql_profile
