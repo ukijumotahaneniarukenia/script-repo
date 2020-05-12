@@ -1,5 +1,24 @@
 #!/usr/bin/env bash
 
+
+#イメージ
+
+DEFAULT_JAVA_VERSION=11
+
+
+#バージョン情報を切り出しておきたい。一括管理したいんで。
+
+#当該スクリプトの引数にバージョン変数名:指定バージョンの可変長引数をうけとって指定があればうわがきするような感じのほうが、コンテナ内で
+#同一ソフトが複数のバージョンが混在したときに当該単一ファイルで実行バージョンを変えることができる
+
+#if [ -z ];then
+#  DEFAULT_JAVA_VERSION=JAVA_VERSION
+#else
+#
+#fi
+
+
+
 #自作コマンド格納ディレクトリ
 mkdir -p $HOME/.local/bin
 echo 'export PATH=$HOME/.local/bin:$PATH' >>$HOME/.bashrc
@@ -11,7 +30,7 @@ echo 'export PATH=$ELASTICSEARCH_HOME/bin:$PATH'>>$HOME/.bashrc
 echo 'export PATH=/usr/local/src/xml2json:$PATH'>>$HOME/.bashrc
 echo 'export LD_LIBRARY_PATH=/usr/local/lib' >>$HOME/.bashrc
 echo 'export PATH=$PATH:$HOME/.local/bin' >> $HOME/.bashrc
-echo 'export JAVA_HOME=/usr/local/src/jdk-11' >> $HOME/.bashrc
+echo "'export JAVA_HOME=/usr/local/src/jdk-${DEFAULT_JAVA_VERSION}'" >> $HOME/.bashrc
 echo 'export PATH=$JAVA_HOME/bin:$PATH' >> $HOME/.bashrc
 echo 'export GOROOT=/usr/local/src/go'>>$HOME/.bashrc
 echo 'export PATH=$GOROOT/bin:$PATH'>>$HOME/.bashrc

@@ -10,7 +10,3 @@ useradd -m -g kibana -u 993 kibana && \
 chsh -s /bin/bash kibana && \
 echo 'kibana_pwd' | passwd --stdin kibana && \
 echo 'kibana ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
-echo 'root_pwd' | passwd --stdin root
-echo 'root_pwd' | passwd --stdin root
-echo 'root_pwd' | passwd --stdin root
-echo 'root_pwd' | passwd --stdin root
