@@ -4,6 +4,10 @@
 mkdir -p $HOME/.local/bin
 echo 'export PATH=$HOME/.local/bin:$PATH' >>$HOME/.bashrc
 
+
+echo 'APACHE_SPARK_HOME=/usr/local/src/spark-3.0.0-preview2-bin-hadoop3.2' >>$HOME/.bashrc
+echo 'export PATH=$APACHE_SPARK_HOME/bin:$APACHE_SPARK_HOME/sbin:$PATH' >>$HOME/.bashrc
+
 echo 'export PATH=/usr/local/src/xml2json:$PATH'>>$HOME/.bashrc
 echo 'export LD_LIBRARY_PATH=/usr/local/lib' >>$HOME/.bashrc
 echo 'export PATH=$PATH:$HOME/.local/bin' >> $HOME/.bashrc
