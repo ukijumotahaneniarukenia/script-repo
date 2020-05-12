@@ -1,14 +1,20 @@
 #!/usr/bin/env bash
 
+#ホームディレクトリとホームディレクトリ以外なのか
+
 JAVA_VERSION=$1;shift;
 MAVEN_VERSION=$1;shift;
 GRADLE_VERSION=$1;shift;
 APACHE_SOLR_VERSION=$1;shift;
+APACHE_SPARK_VERSION=$1;shift;
+HADOOP_VERSION=$1;shift;
 
 DEFAULT_JAVA_VERSION=11
 DEFAULT_MAVEN_VERSION=3-6-3
 DEFAULT_GRADLE_VERSION=6-1
 DEFAULT_APACHE_SOLR_VERSION=8-5-1
+DEFAULT_APACHE_SPARK_VERSION=3-0-0
+DEFAULT_HADOOP_VERSION=3-2
 
 if [ -z $JAVA_VERSION ];then
   :
@@ -34,6 +40,18 @@ else
   DEFAULT_APACHE_SOLR_VERSION_VERSION=$APACHE_SOLR_VERSION
 fi
 
+if [ -z $APACHE_SPARK_VERSION ];then
+  :
+else
+  DEFAULT_APACHE_SPARK_VERSION=$APACHE_SPARK_VERSION
+fi
+
+if [ -z $HADOOP_VERSION ];then
+  :
+else
+  DEFAULT_HADOOP_VERSION=$HADOOP_VERSION
+fi
+
 #バージョン情報に影響しないパス設定 便利
 echo 'export ELASTICSEARCH_HOME=/usr/share/elasticsearch'>>$HOME/.bashrc
 echo 'export PATH=$ELASTICSEARCH_HOME/bin:$PATH'>>$HOME/.bashrc
@@ -50,6 +68,8 @@ echo "export APACHE_SOLR_HOME=/usr/local/src/solr-$(echo $DEFAULT_APACHE_SOLR_VE
 echo 'export PATH=$APACHE_SOLR_HOME/bin:$PATH' >>$HOME/.bashrc
 echo "export GRADLE_HOME=/usr/local/src/gradle-$(echo $DEFAULT_GRADLE_VERSION|tr '-' '.')">>$HOME/.bashrc
 echo 'export PATH=$GRADLE_HOME/bin:$PATH' >> $HOME/.bashrc
+echo "APACHE_SPARK_HOME=/usr/local/src/spark-$DEFAULT_APACHE_SPARK_VERSION-preview2-bin-hadoop$DEFAULT_HADOOP_VERSION" >>$HOME/.bashrc
+echo 'export PATH=$APACHE_SPARK_HOME/bin:$APACHE_SPARK_HOME/sbin:$PATH' >>$HOME/.bashrc
 
 #バージョン情報に影響されるパス設定 引数あれば上書きして設定 OS情報入っている...
 echo 'export PATH=$SWIFT_HOME/bin:$PATH' >>$HOME/.bashrc
