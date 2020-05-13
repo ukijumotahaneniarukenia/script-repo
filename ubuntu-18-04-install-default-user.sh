@@ -5,15 +5,10 @@ DEFAULT_USER_NAME=kuraine
 DEFAULT_GROUP_ID=9999
 DEFAULT_GROUP_NAME=kuraine
 
-USER=$1;shift;
-GROUP=$1;shift;
-
-if [-z $USER ]; then
-  :
-else
-  USER_ID=$(echo $USER|sed 's/:.*//')
-  USER_NAME=$(echo $USER|sed 's/.*://')
-fi
+USER_ID=$1;shift;
+USER_NAME=$1;shift;
+GROUP_ID=$1;shift;
+GROUP_NAME=$1;shift;
 
 if [ -z $USER_ID ];then
   :
@@ -25,13 +20,6 @@ if [ -z $USER_NAME ];then
   :
 else
   DEFAULT_USER_NAME=$USER_NAME
-fi
-
-if [-z $GROUP ]; then
-  :
-else
-  GROUP_ID=$(echo $GROUP|sed 's/:.*//')
-  GROUP_NAME=$(echo $GROUP|sed 's/.*://')
 fi
 
 if [ -z $GROUP_ID ];then
