@@ -87,7 +87,8 @@ echo 'alias pyc="bash /usr/local/src/pycharm-community-2019.3.1/bin/pycharm.sh 1
 echo 'alias qtd="( mkdir -p $HOME/qt-wrksp && export XDG_RUNTIME_DIR=$HOME/qt-wrksp && cd /usr/lib/x86_64-linux-gnu/qt5/bin && ./designer 1>$HOME/launch-qt-designer.log 2>&1 </dev/null & )"' >>$HOME/.bashrc
 echo 'export ANDROID_STUDIO_HOME=/usr/local/src/android-studio' >>$HOME/.bashrc
 echo "export PATH=$ANDROID_STUDIO_HOME/bin:$PATH" >>$HOME/.bashrc
-echo 'alias and=studio.sh 1>launch-android-studio.log 2>&1 &' >>$HOME/.bashrc
+echo 'alias and=studio.sh 1>$HOME/launch-android-studio.log 2>&1 &' >>$HOME/.bashrc
+echo 'alias cb=codeblocks 1>$HOME/launch-codeblocks 2>&1 &' >>$HOME/.bashrc
 
 #移動系
 echo 'alias repo="cd /usr/local/src/script-repo"' >> $HOME/.bashrc
