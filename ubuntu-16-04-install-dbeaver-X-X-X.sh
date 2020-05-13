@@ -10,7 +10,7 @@ apt install -y libswt-webkit-gtk-4-jni
 cd /usr/local/src
 git clone https://github.com/dbeaver/dbeaver.git dbeaver
 cd dbeaver
-mvn package
+/usr/local/src/apache-maven-3.6.3/bin/mvn package
 
 
 #[INFO] ------------------------------------------------------------------------
