@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-apt install -y openjdk-11-jdk openjdk-11-jre
+apt install -y openjdk-8-jre-headless openjdk-11-jre-headless openjdk-11-jdk-headless
 
 apt install -y libswt-webkit-gtk-4-jni
 
