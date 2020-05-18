@@ -14,7 +14,7 @@ from
     )
   ) as s2;
 
-drop table test_tbl;
+drop table if exists test_tbl;
 
 create table test_tbl (id int,item text);
 
