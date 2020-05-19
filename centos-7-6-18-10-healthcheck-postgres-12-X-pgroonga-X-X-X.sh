@@ -11,5 +11,5 @@ psql -U postgres -c "create database testdb"
 psql -U postgres -d testdb -c "SELECT * FROM pg_available_extensions;"
 psql -U postgres -d testdb -c "CREATE EXTENSION pgroonga;"
 psql -U postgres -d testdb -c "SELECT * FROM pg_available_extensions;"
-psql -U postgres -d testdb </usr/local/src/script-repo/centos-7-6-18-10-healthcheck-postgres-pgroonga-vim.sql
+psql -U postgres -d testdb </usr/local/src/script-repo/centos-7-6-18-10-healthcheck-postgres-12-X-pgroonga-X-X-X.sql
 EOF
