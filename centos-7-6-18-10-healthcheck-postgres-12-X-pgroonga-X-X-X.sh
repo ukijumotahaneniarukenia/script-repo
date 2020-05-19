@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 su - postgres <<EOF
-ps aux | grep -P '/usr/local/bin/postgres -D /home/postgres/dat' | grep -v grep | awk '{print \$2}' | xargs kill -9
+ps aux | grep -P '/usr/pgsql-12/bin/postgres -D /home/postgres/dat' | grep -v grep | awk '{print \$2}' | xargs kill -9
 rm -rf /home/postgres/dat
-initdb -D /home/postgres/dat
-pg_ctl -D /home/postgres/dat -l /home/postgres/launch-postgres.log start
+/usr/pgsql-12/bin/initdb -D /home/postgres/dat
+/usr/pgsql-12/bin/pg_ctl -D /home/postgres/dat -l /home/postgres/launch-postgres.log start
 
 sleep 100
 
