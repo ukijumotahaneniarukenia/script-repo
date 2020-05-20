@@ -10,7 +10,7 @@ N=$(ps aux | grep 'mariadbd' | grep -v grep | awk '{print $2}' | xargs)
 #mysqlユーザーで実行
 su - mysql <<EOS
 
-/usr/sbin/mariadbd 1>$HOME/launch-mariadb.log 2>&1 &
+/usr/sbin/mariadbd 1>/home/mysql/launch-mariadb.log 2>&1 &
 
 EOS
 
