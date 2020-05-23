@@ -68,7 +68,7 @@ echo "export APACHE_SOLR_HOME=/usr/local/src/solr-$(echo $DEFAULT_APACHE_SOLR_VE
 echo 'export PATH=$APACHE_SOLR_HOME/bin:$PATH' >>$HOME/.bashrc
 echo "export GRADLE_HOME=/usr/local/src/gradle-$(echo $DEFAULT_GRADLE_VERSION|tr '-' '.')">>$HOME/.bashrc
 echo 'export PATH=$GRADLE_HOME/bin:$PATH' >> $HOME/.bashrc
-echo "APACHE_SPARK_HOME=/usr/local/src/spark-$DEFAULT_APACHE_SPARK_VERSION-preview2-bin-hadoop$DEFAULT_HADOOP_VERSION" >>$HOME/.bashrc
+echo "export APACHE_SPARK_HOME=/usr/local/src/spark-$DEFAULT_APACHE_SPARK_VERSION-preview2-bin-hadoop$DEFAULT_HADOOP_VERSION" >>$HOME/.bashrc
 echo 'export PATH=$APACHE_SPARK_HOME/bin:$APACHE_SPARK_HOME/sbin:$PATH' >>$HOME/.bashrc
 
 #バージョン情報に影響されるパス設定 引数あれば上書きして設定 OS情報入っている...
