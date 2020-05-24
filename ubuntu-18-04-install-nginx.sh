@@ -9,7 +9,5 @@ apt install -y nginx
 
 
 
-
 #nginxでcgiを使えるようにする
-#https://www.unix-power.net/networking/post-1132
 apt install -y fcgiwrap spawn-fcgi
