@@ -57,6 +57,10 @@ echo 'export ELASTICSEARCH_HOME=/usr/share/elasticsearch'>>$HOME/.bashrc
 echo 'export PATH=$ELASTICSEARCH_HOME/bin:$PATH'>>$HOME/.bashrc
 echo 'export GOROOT=/usr/local/src/go'>>$HOME/.bashrc
 echo 'export PATH=$GOROOT/bin:$PATH'>>$HOME/.bashrc
+echo 'export CHROME_LINUX_HOME=/usr/local/src/chrome-linux' >>$HOME/.bashrc
+echo 'export PATH=$CHROME_LINUX_HOME:$PATH' >>$HOME/.bashrc
+echo 'export CHROME_DRIVER_HOME=/usr/local/src/chromedriver_linux64' >>$HOME/.bashrc
+echo 'export PATH=$CHROME_DRIVER_HOME:$PATH' >>$HOME/.bashrc
 
 #バージョン情報に影響されるパス設定 引数あれば上書きして設定
 echo "export JAVA_HOME=/usr/local/src/jdk-$(echo $DEFAULT_JAVA_VERSION|tr '-' '.' )" >> $HOME/.bashrc
@@ -77,8 +81,6 @@ echo 'export SWIFT_HOME=/usr/local/src/swift-DEVELOPMENT-SNAPSHOT-2020-01-31-a-u
 
 #エディタ系 エディタのバージョンはハードで一旦いいや
 echo 'export PATH=/usr/local/src/Komodo-Edit-11/bin:$PATH' >> $HOME/.bashrc
-echo 'export CHROME_HOME=/usr/local/src/chromium-latest-linux/730479'>>$HOME/.bashrc
-echo 'export PATH=$CHROME_HOME/chrome-linux:$PATH'>>$HOME/.bashrc
 echo 'alias pyc="bash /usr/local/src/pycharm-community-2019.3.1/bin/pycharm.sh 1>$HOME/launch-pycharm.log 2>&1 &"' >>$HOME/.bashrc
 echo 'alias idea="/usr/local/src/idea-IC-192.7142.36/bin/idea.sh >$HOME/launch-idea.log 2>&1 &"' >> $HOME/.bashrc
 echo 'alias myb="mysql-workbench 1>$HOME/launch-mysql-bench.log 2>&1 &"' >>$HOME/.bashrc
