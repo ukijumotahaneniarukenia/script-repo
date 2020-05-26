@@ -57,6 +57,10 @@ echo 'export ELASTICSEARCH_HOME=/usr/share/elasticsearch'>>$HOME/.bashrc
 echo 'export PATH=$ELASTICSEARCH_HOME/bin:$PATH'>>$HOME/.bashrc
 echo 'export GOROOT=/usr/local/src/go'>>$HOME/.bashrc
 echo 'export PATH=$GOROOT/bin:$PATH'>>$HOME/.bashrc
+echo 'export CHROME_LINUX_HOME=/usr/local/src/chrome-linux' >>$HOME/.bashrc
+echo 'export PATH=$CHROME_LINUX_HOME:$PATH' >>$HOME/.bashrc
+echo 'export CHROME_DRIVER_HOME=/usr/local/src/chromedriver_linux64' >>$HOME/.bashrc
+echo 'export PATH=$CHROME_DRIVER_HOME:$PATH' >>$HOME/.bashrc
 
 #バージョン情報に影響されるパス設定 引数あれば上書きして設定
 echo "export JAVA_HOME=/usr/local/src/jdk-$(echo $DEFAULT_JAVA_VERSION|tr '-' '.' )" >> $HOME/.bashrc
