@@ -57,6 +57,7 @@ echo 'export ELASTICSEARCH_HOME=/usr/share/elasticsearch'>>$HOME/.bashrc
 echo 'export PATH=$ELASTICSEARCH_HOME/bin:$PATH'>>$HOME/.bashrc
 echo 'export GOPATH=$HOME/.local' >>$HOME/.bashrc
 echo 'export PATH=$GOPATH/bin:$PATH' >>$HOME/.bashrc
+echo 'export PATH=/usr/local/src/go/bin:$PATH' >>$HOME/.bashrc
 echo 'export CHROME_LINUX_HOME=/usr/local/src/chrome-linux' >>$HOME/.bashrc
 echo 'export PATH=$CHROME_LINUX_HOME:$PATH' >>$HOME/.bashrc
 echo 'export CHROME_DRIVER_HOME=/usr/local/src/chromedriver_linux64' >>$HOME/.bashrc
