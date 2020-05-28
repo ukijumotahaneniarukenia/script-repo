@@ -55,7 +55,8 @@ fi
 #バージョン情報に影響しないパス設定 便利
 echo 'export ELASTICSEARCH_HOME=/usr/share/elasticsearch'>>$HOME/.bashrc
 echo 'export PATH=$ELASTICSEARCH_HOME/bin:$PATH'>>$HOME/.bashrc
-echo 'export GOROOT=/usr/local/src/go'>>$HOME/.bashrc
+echo 'export GOPATH=$HOME/.local' >>$HOME/.bashrc
+echo 'export PATH=$GOPATH/bin:$PATH' >>$HOME/.bashrc
 echo 'export PATH=$GOROOT/bin:$PATH'>>$HOME/.bashrc
 echo 'export CHROME_LINUX_HOME=/usr/local/src/chrome-linux' >>$HOME/.bashrc
 echo 'export PATH=$CHROME_LINUX_HOME:$PATH' >>$HOME/.bashrc
