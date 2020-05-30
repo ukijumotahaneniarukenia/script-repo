@@ -77,6 +77,14 @@ echo 'export PATH=$GRADLE_HOME/bin:$PATH' >> $HOME/.bashrc
 echo "export APACHE_SPARK_HOME=/usr/local/src/spark-$DEFAULT_APACHE_SPARK_VERSION-preview2-bin-hadoop$DEFAULT_HADOOP_VERSION" >>$HOME/.bashrc
 echo 'export PATH=$APACHE_SPARK_HOME/bin:$APACHE_SPARK_HOME/sbin:$PATH' >>$HOME/.bashrc
 
+
+#sdkman系
+echo "export SDKMAN_GRADLE_HOME=$HOME/.sdkman/candidates/gradle/$(echo $DEFAULT_GRADLE_VERSION|tr '-' '.')">>$HOME/.bashrc
+echo 'export PATH=$SDKMAN_GRADLE_HOME/bin:$PATH' >> $HOME/.bashrc
+
+
+
+
 #バージョン情報に影響されるパス設定 引数あれば上書きして設定 OS情報入っている...
 echo 'export PATH=$SWIFT_HOME/bin:$PATH' >>$HOME/.bashrc
 echo 'export SWIFT_HOME=/usr/local/src/swift-DEVELOPMENT-SNAPSHOT-2020-01-31-a-ubuntu18.04/usr' >>$HOME/.bashrc
