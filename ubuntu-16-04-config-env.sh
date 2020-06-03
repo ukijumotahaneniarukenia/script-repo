@@ -5,6 +5,7 @@
 JAVA_VERSION=$1;shift;
 MAVEN_VERSION=$1;shift;
 GRADLE_VERSION=$1;shift;
+GRAALVM_VERSION=$1;shift;
 APACHE_SOLR_VERSION=$1;shift;
 APACHE_SPARK_VERSION=$1;shift;
 HADOOP_VERSION=$1;shift;
@@ -12,6 +13,7 @@ HADOOP_VERSION=$1;shift;
 DEFAULT_JAVA_VERSION=11
 DEFAULT_MAVEN_VERSION=3-6-3
 DEFAULT_GRADLE_VERSION=6-1
+DEFAULT_GRAALVM_VERSION=20-1-0
 DEFAULT_APACHE_SOLR_VERSION=8-5-1
 DEFAULT_APACHE_SPARK_VERSION=3-0-0
 DEFAULT_HADOOP_VERSION=3-2
@@ -32,6 +34,12 @@ if [ -z $GRADLE_VERSION ];then
   :
 else
   DEFAULT_GRADLE_VERSION=$GRADLE_VERSION
+fi
+
+if [ -z $GRAALVM_VERSION ];then
+  :
+else
+  DEFAULT_GRAALVM_VERSION=$GRAALVM_VERSION
 fi
 
 if [ -z $APACHE_SOLR_VERSION ];then
@@ -56,7 +64,7 @@ fi
 echo 'export ELASTICSEARCH_HOME=/usr/share/elasticsearch'>>$HOME/.bashrc
 echo 'export PATH=$ELASTICSEARCH_HOME/bin:$PATH'>>$HOME/.bashrc
 mkdir -p $HOME/.local/go-script/bin
-echo 'export GOPATH=$HOME/.local/go-script' >>$HOME/.bashrc
+echo 'export GOPATH=$HOME/.local/go-repo' >>$HOME/.bashrc
 echo 'export PATH=$GOPATH/bin:$PATH' >>$HOME/.bashrc
 echo 'export PATH=/usr/local/src/go/bin:$PATH' >>$HOME/.bashrc
 echo 'export CHROME_LINUX_HOME=/usr/local/src/chrome-linux' >>$HOME/.bashrc
@@ -76,6 +84,16 @@ echo "export GRADLE_HOME=/usr/local/src/gradle-$(echo $DEFAULT_GRADLE_VERSION|tr
 echo 'export PATH=$GRADLE_HOME/bin:$PATH' >> $HOME/.bashrc
 echo "export APACHE_SPARK_HOME=/usr/local/src/spark-$DEFAULT_APACHE_SPARK_VERSION-preview2-bin-hadoop$DEFAULT_HADOOP_VERSION" >>$HOME/.bashrc
 echo 'export PATH=$APACHE_SPARK_HOME/bin:$APACHE_SPARK_HOME/sbin:$PATH' >>$HOME/.bashrc
+
+
+echo "export GRAALVM_HOME=/usr/local/src/graalvm-ce-java$(echo $DEFAULT_JAVA_VERSION|tr '-' '.' )-$(echo $DEFAULT_GRAALVM_VERSION|tr '-' '.' )" >>$HOME/.bashrc
+
+
+
+#sdkman系
+echo "export SDKMAN_GRADLE_HOME=$HOME/.sdkman/candidates/gradle/$(echo $DEFAULT_GRADLE_VERSION|tr '-' '.')">>$HOME/.bashrc
+echo 'export PATH=$SDKMAN_GRADLE_HOME/bin:$PATH' >> $HOME/.bashrc
+
 
 #バージョン情報に影響されるパス設定 引数あれば上書きして設定 OS情報入っている...
 echo 'export PATH=$SWIFT_HOME/bin:$PATH' >>$HOME/.bashrc

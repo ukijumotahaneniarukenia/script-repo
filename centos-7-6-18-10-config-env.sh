@@ -85,13 +85,14 @@ echo 'export PATH=$GRADLE_HOME/bin:$PATH' >> $HOME/.bashrc
 echo "export APACHE_SPARK_HOME=/usr/local/src/spark-$DEFAULT_APACHE_SPARK_VERSION-preview2-bin-hadoop$DEFAULT_HADOOP_VERSION" >>$HOME/.bashrc
 echo 'export PATH=$APACHE_SPARK_HOME/bin:$APACHE_SPARK_HOME/sbin:$PATH' >>$HOME/.bashrc
 
+
 echo "export GRAALVM_HOME=/usr/local/src/graalvm-ce-java$(echo $DEFAULT_JAVA_VERSION|tr '-' '.' )-$(echo $DEFAULT_GRAALVM_VERSION|tr '-' '.' )" >>$HOME/.bashrc
+
+
 
 #sdkman系
 echo "export SDKMAN_GRADLE_HOME=$HOME/.sdkman/candidates/gradle/$(echo $DEFAULT_GRADLE_VERSION|tr '-' '.')">>$HOME/.bashrc
 echo 'export PATH=$SDKMAN_GRADLE_HOME/bin:$PATH' >> $HOME/.bashrc
-
-
 
 
 #バージョン情報に影響されるパス設定 引数あれば上書きして設定 OS情報入っている...
@@ -100,8 +101,6 @@ echo 'export SWIFT_HOME=/usr/local/src/swift-DEVELOPMENT-SNAPSHOT-2020-01-31-a-u
 
 #エディタ系 エディタのバージョンはハードで一旦いいや
 echo 'export PATH=/usr/local/src/Komodo-Edit-11/bin:$PATH' >> $HOME/.bashrc
-echo 'export CHROME_HOME=/usr/local/src/chromium-latest-linux/730479'>>$HOME/.bashrc
-echo 'export PATH=$CHROME_HOME/chrome-linux:$PATH'>>$HOME/.bashrc
 echo 'alias pyc="bash /usr/local/src/pycharm-community-2019.3.1/bin/pycharm.sh 1>$HOME/launch-pycharm.log 2>&1 &"' >>$HOME/.bashrc
 echo 'alias idea="/usr/local/src/idea-IC-192.7142.36/bin/idea.sh >$HOME/launch-idea.log 2>&1 &"' >> $HOME/.bashrc
 echo 'alias myb="mysql-workbench 1>$HOME/launch-mysql-bench.log 2>&1 &"' >>$HOME/.bashrc
