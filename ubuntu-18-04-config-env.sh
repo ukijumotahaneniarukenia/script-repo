@@ -87,7 +87,7 @@ echo 'export PATH=$APACHE_SPARK_HOME/bin:$APACHE_SPARK_HOME/sbin:$PATH' >>$HOME/
 
 
 echo "export GRAALVM_HOME=/usr/local/src/graalvm-ce-java$(echo $DEFAULT_JAVA_VERSION|tr '-' '.' )-$(echo $DEFAULT_GRAALVM_VERSION|tr '-' '.' )" >>$HOME/.bashrc
-
+echo 'export PATH=$GRAALVM_HOME/bin:$PATH' >>$HOME/.bashrc
 
 
 #sdkman系
