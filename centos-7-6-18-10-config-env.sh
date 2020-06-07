@@ -96,9 +96,12 @@ echo "export SDKMAN_GRADLE_HOME=$HOME/.sdkman/candidates/gradle/$(echo $DEFAULT_
 echo 'export PATH=$SDKMAN_GRADLE_HOME/bin:$PATH' >> $HOME/.bashrc
 
 
-#バージョン情報に影響されるパス設定 引数あれば上書きして設定 OS情報入っている...
+#swift ハードでいいや
+echo 'export SWIFT_HOME=/usr/local/src/swift-5.2.4-RELEASE-ubuntu20.04/usr' >>$HOME/.bashrc
 echo 'export PATH=$SWIFT_HOME/bin:$PATH' >>$HOME/.bashrc
-echo 'export SWIFT_HOME=/usr/local/src/swift-DEVELOPMENT-SNAPSHOT-2020-01-31-a-ubuntu18.04/usr' >>$HOME/.bashrc
+echo 'export LD_LIBRARY_PATH=/usr/local/src/swift-5.2.4-RELEASE-ubuntu20.04/usr/lib/swift/linux:$LD_LIBRARY_PATH' >>$HOME/.bashrc
+cp /usr/local/src/swift-5.2.4-RELEASE-ubuntu20.04/usr/bin/sourcekit-lsp /usr/local/bin/sourcekit-lsp
+
 
 #エディタ系
 echo "alias idea=\"/usr/local/src/idea-IC-$(echo $DEFAULT_IDEA_VERSION|tr '-' '.')/bin/idea.sh >$HOME/launch-idea.log 2>&1 &\"" >> $HOME/.bashrc
