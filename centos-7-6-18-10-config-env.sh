@@ -9,6 +9,7 @@ GRAALVM_VERSION=$1;shift;
 APACHE_SOLR_VERSION=$1;shift;
 APACHE_SPARK_VERSION=$1;shift;
 HADOOP_VERSION=$1;shift;
+PYCHARM_VERSION=$1;shift;
 
 DEFAULT_JAVA_VERSION=11
 DEFAULT_MAVEN_VERSION=3-6-3
@@ -18,6 +19,7 @@ DEFAULT_APACHE_SOLR_VERSION=8-5-1
 DEFAULT_APACHE_SPARK_VERSION=3-0-0
 DEFAULT_HADOOP_VERSION=3-2
 DEFAULT_IDEA_VERSION=201-7846-76
+DEFAULT_PYCHARM_VERSION=2020-1-2
 
 if [ -z $JAVA_VERSION ];then
   :
@@ -59,6 +61,12 @@ if [ -z $HADOOP_VERSION ];then
   :
 else
   DEFAULT_HADOOP_VERSION=$HADOOP_VERSION
+fi
+
+if [ -z $PYCHARM_VERSION ];then
+  :
+else
+  DEFAULT_PYCHARM_VERSION=$PYCHARM_VERSION
 fi
 
 #バージョン情報に影響しないパス設定 便利
@@ -106,7 +114,7 @@ cp /usr/local/src/swift-5.2.4-RELEASE-ubuntu20.04/usr/bin/sourcekit-lsp /usr/loc
 #エディタ系
 echo "alias idea=\"/usr/local/src/idea-IC-$(echo $DEFAULT_IDEA_VERSION|tr '-' '.')/bin/idea.sh >$HOME/launch-idea.log 2>&1 &\"" >> $HOME/.bashrc
 
-echo 'alias pyc="bash /usr/local/src/pycharm-community-2019.3.1/bin/pycharm.sh 1>$HOME/launch-pycharm.log 2>&1 &"' >>$HOME/.bashrc
+echo "alias pyc=\"bash /usr/local/src/pycharm-community-$(echo $DEFAULT_PYCHARM_VERSION|tr '-' '.')/bin/pycharm.sh 1>$HOME/launch-pycharm.log 2>&1 &\"" >>$HOME/.bashrc
 
 echo 'alias myb="mysql-workbench 1>$HOME/launch-mysql-bench.log 2>&1 &"' >>$HOME/.bashrc
 
