@@ -126,6 +126,13 @@ echo 'export PATH=$ANDROID_STUDIO_HOME/bin:$PATH' >> $HOME/.bashrc
 echo 'alias and="studio.sh 1>$HOME/launch-android-studio.log 2>&1 &"' >> $HOME/.bashrc
 
 
+#golangのIDE
+echo 'export LITEIDE_HOME=/usr/local/src/liteide' >> $HOME/.bashrc
+echo 'export PATH=$LITEIDE_HOME/bin:$PATH' >> $HOME/.bashrc
+
+
+
+
 #移動系
 echo 'alias repo="cd /usr/local/src/script-repo"' >> $HOME/.bashrc
 
