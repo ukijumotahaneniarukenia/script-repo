@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+cd /usr/local/src
 
 #https://github.com/mruby/mruby/releases/tag/2.1.1
 curl -fsSL https://github.com/mruby/mruby/archive/2.1.1.tar.gz -o mruby-2.1.1.tar.gz
