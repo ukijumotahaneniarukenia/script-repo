@@ -81,6 +81,14 @@ echo 'export PATH=$CHROME_LINUX_HOME:$PATH' >>$HOME/.bashrc
 echo 'export CHROME_DRIVER_HOME=/usr/local/src/chromedriver_linux64' >>$HOME/.bashrc
 echo 'export PATH=$CHROME_DRIVER_HOME:$PATH' >>$HOME/.bashrc
 
+
+#クロスコンパイルできるラスト
+echo 'export RUST_HOME=$HOME/.cargo' >>$HOME/.bashrc
+echo 'export PATH=$RUST_HOME/bin:$PATH' >>$HOME/.bashrc
+
+echo 'export OSXCROSS_HOME=/usr/local/src/osxcross/target' >>$HOME/.bashrc
+echo 'export PATH=$OSXCROSS_HOME/bin:$PATH' >>$HOME/.bashrc
+
 #バージョン情報に影響されるパス設定 引数あれば上書きして設定
 echo "export JAVA_HOME=/usr/local/src/jdk-$(echo $DEFAULT_JAVA_VERSION|tr '-' '.' )" >> $HOME/.bashrc
 echo 'export PATH=$JAVA_HOME/bin:$PATH' >> $HOME/.bashrc
