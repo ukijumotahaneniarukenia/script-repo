@@ -69,6 +69,11 @@ else
   DEFAULT_PYCHARM_VERSION=$PYCHARM_VERSION
 fi
 
+#自作コマンドのパス
+#そのうち作ったこともいつものようにわすれてる
+echo 'export SCRIPT_CMD_HOME=$HOME/.local/script-cmd' >>$HOME/.bashrc
+echo 'export PATH=$SCRIPT_CMD_HOME/bin:$PATH'>>$HOME/.bashrc
+
 #バージョン情報に影響しないパス設定 便利
 echo 'export ELASTICSEARCH_HOME=/usr/share/elasticsearch'>>$HOME/.bashrc
 echo 'export PATH=$ELASTICSEARCH_HOME/bin:$PATH'>>$HOME/.bashrc
