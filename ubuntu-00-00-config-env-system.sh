@@ -151,7 +151,7 @@ echo 'alias repo="cd /usr/local/src/script-repo"' >> $HOME/.bashrc
 echo 'alias sskc="cd $HOME/script-sketch"' >> $HOME/.bashrc
 echo 'alias senv="cd $HOME/script-env"' >> $HOME/.bashrc
 echo 'alias scmd="cd $HOME/script-cmd"' >> $HOME/.bashrc
-
+echo 'alias sdat="cd $HOME/script-dat"' >> $HOME/.bashrc
 
 #優先度高いものほど下に追加
 echo 'export PATH=/usr/local/bin:$PATH' >>$HOME/.bashrc
