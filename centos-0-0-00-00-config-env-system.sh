@@ -148,6 +148,10 @@ echo 'export PATH=$LITEIDE_HOME/bin:$PATH' >> $HOME/.bashrc
 
 #移動系
 echo 'alias repo="cd /usr/local/src/script-repo"' >> $HOME/.bashrc
+echo 'alias sskc="cd $HOME/script-sketch"' >> $HOME/.bashrc
+echo 'alias senv="cd $HOME/script-env"' >> $HOME/.bashrc
+echo 'alias scmd="cd $HOME/script-cmd"' >> $HOME/.bashrc
+
 
 #優先度高いものほど下に追加
 echo 'export PATH=/usr/local/bin:$PATH' >>$HOME/.bashrc
