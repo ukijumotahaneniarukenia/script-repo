@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+#https://dart.dev/get-dart
+
 cd /usr/local/src
 
 apt-get update
