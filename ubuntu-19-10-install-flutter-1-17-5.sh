@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+#https://flutter.dev/docs/get-started/install/linux
+
 cd /usr/local/src
 
 curl -sSLO https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_1.17.5-stable.tar.xz
