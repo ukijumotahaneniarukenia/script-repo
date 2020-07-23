@@ -86,6 +86,10 @@ echo 'export PATH=$CHROME_LINUX_HOME:$PATH' >>$HOME/.bashrc
 echo 'export CHROME_DRIVER_HOME=/usr/local/src/chromedriver_linux64' >>$HOME/.bashrc
 echo 'export PATH=$CHROME_DRIVER_HOME:$PATH' >>$HOME/.bashrc
 
+echo 'export FLUTTER_HOME=/usr/local/src/flutter' >> $HOME/.bashrc
+echo 'export PATH=$FLUTTER_HOME/bin:$PATH' >> $HOME/.bashrc
+
+
 
 #クロスコンパイルできるラスト
 echo 'export RUST_HOME=$HOME/.cargo' >>$HOME/.bashrc
@@ -142,7 +146,6 @@ echo 'alias and="studio.sh 1>$HOME/launch-android-studio.log 2>&1 &"' >> $HOME/.
 #golangのIDE
 echo 'export LITEIDE_HOME=/usr/local/src/liteide' >> $HOME/.bashrc
 echo 'export PATH=$LITEIDE_HOME/bin:$PATH' >> $HOME/.bashrc
-
 
 
 
