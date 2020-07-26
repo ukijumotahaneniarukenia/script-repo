@@ -4,4 +4,5 @@ iproute2 \
 lsof \
 net-tools \
 psmisc \
-traceroute
+traceroute \
+dnsutils
