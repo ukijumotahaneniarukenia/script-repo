@@ -5,4 +5,4 @@ lsof \
 net-tools \
 psmisc \
 traceroute \
-dnsutils
+dnsutils #nslookupとdigコマンドが使えるようになる
