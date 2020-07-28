@@ -12,3 +12,6 @@ su -c 'curl https://download.mono-project.com/repo/centos7-vs.repo | tee /etc/yu
 yum install -y monodevelop
 
 monodevelop --help
+
+#ubuntuはコアダンプ吐くので、centosで
+#$monodevelop 1>$HOME/launch-monodevelop.log 2>&1 &
