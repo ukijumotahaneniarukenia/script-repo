@@ -5,5 +5,5 @@ lsof \
 net-tools \
 psmisc \
 traceroute \
-dnsutils \ #nslookupとdigコマンドが使えるようになる
-iputils-tracepath #tracepathコマンドが使えるようになる
+dnsutils \
+iputils-tracepath
