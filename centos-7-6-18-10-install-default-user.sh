@@ -12,39 +12,21 @@ GROUP_ID=$1;shift;
 GROUP_NAME=$1;shift;
 PASSWORD=$1;shift;
 
-if [ -z $USER_ID ];then
-  :
-else
-  DEFAULT_USER_ID=$USER_ID
+CHECK_EXISTS_USER_ID=$(cat /etc/passwd | grep ${USER_ID:-$DEFAULT_USER_ID} | cut -d ':' -f3)
+CHECK_EXISTS_USER_NAME=$(cat /etc/passwd | grep ${USER_NAME:-$DEFAULT_USER_NAME} | cut -d ':' -f1)
+CHECK_EXISTS_GROUP_ID=$(cat /etc/passwd | grep ${GROUP_ID:-$DEFAULT_GROUP_ID} | cut -d ':' -f4)
+CHECK_EXISTS_GROUP_NAME=$(cat /etc/passwd | grep ${GROUP_NAME:-$DEFAULT_GROUP_NAME} | cut -d ':' -f5| cut -d ',' -f1)
+
+IS_EXISTS=$CHECK_EXISTS_USER_ID$CHECK_EXISTS_USER_NAME$CHECK_EXISTS_GROUP_ID$CHECK_EXISTS_GROUP_NAME
+
+if [ -z $IS_EXISTS ];then
+  groupadd -g ${GROUP_ID:-$DEFAULT_GROUP_ID} ${GROUP_NAME:-$DEFAULT_GROUP_NAME} && \
+  useradd -m -g ${GROUP_NAME:-$DEFAULT_GROUP_NAME} -u ${USER_ID:-$DEFAULT_USER_ID} ${USER_NAME:-$DEFAULT_USER_NAME} && \
+  chsh -s /bin/bash ${USER_NAME:-$DEFAULT_USER_NAME} && \
+  echo ${USER_NAME:-$DEFAULT_USER_NAME}':'${PASSWORD:-$DEFAULT_PASSWORD} | chpasswd && \
+  echo "${USER_NAME:-$DEFAULT_USER_NAME} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 fi
 
-if [ -z $USER_NAME ];then
-  :
-else
-  DEFAULT_USER_NAME=$USER_NAME
+if [[ 0 -eq $(id -u) ]];then
+  echo 'root:root_pwd' | chpasswd
 fi
-
-if [ -z $GROUP_ID ];then
-  :
-else
-  DEFAULT_GROUP_ID=$GROUP_ID
-fi
-
-if [ -z $GROUP_NAME ];then
-  :
-else
-  DEFAULT_GROUP_NAME=$GROUP_NAME
-fi
-
-if [ -z $PASSWORD ];then
-  :
-else
-  DEFAULT_PASSWORD=$PASSWORD
-fi
-
-groupadd -g $DEFAULT_GROUP_ID $DEFAULT_GROUP_NAME && \
-useradd -m -g $DEFAULT_GROUP_NAME -u $DEFAULT_USER_ID $DEFAULT_USER_NAME && \
-chsh -s /bin/bash $DEFAULT_USER_NAME && \
-echo $DEFAULT_PASSWORD | passwd --stdin $DEFAULT_USER_NAME && \
-echo "$DEFAULT_USER_NAME ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers && \
-echo 'root_pwd' | passwd --stdin root
