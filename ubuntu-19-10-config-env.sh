@@ -69,6 +69,9 @@ else
   DEFAULT_PYCHARM_VERSION=$PYCHARM_VERSION
 fi
 
+#使用するログインシェルの設定
+echo 'export SHELL=$(which bash)' >>$HOME/.bashrc
+
 #Xアプリ転送先設定
 echo 'export DISPLAY=:0.0' >>$HOME/.bashrc
 
@@ -82,10 +85,14 @@ echo 'export GTK_IM_MODULE=ibus' >>$HOME/.bashrc
 echo 'export XMODIFIERS=@im=ibus' >>$HOME/.bashrc
 echo 'export QT_IM_MODULE=ibus' >>$HOME/.bashrc
 
+#IME (コンテナホスト上でibus使用しているため、コンテナホストとコンテナゲストを棲み分けたい意味での設定)
 #echo 'export GTK_IM_MODULE=fcitx' >>$HOME/.bashrc
 #echo 'export XMODIFIERS=@im=fcitx' >>$HOME/.bashrc
 #echo 'export QT_IM_MODULE=fcitx' >>$HOME/.bashrc
 
+#ヒストリの上限値設定
+echo 'export HISTSIZE=1000000' >>$HOME/.bashrc #オンメモリ
+echo 'export HISTFILESIZE=1000000' >>$HOME/.bashrc #.bash_historyファイル
 
 #自作コマンドのパス
 #そのうち作ったこともいつものようにわすれてる
