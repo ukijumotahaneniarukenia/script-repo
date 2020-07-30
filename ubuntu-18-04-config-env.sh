@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+OS_VERSION=$(cat /etc/os-release | grep VERSION_ID | xargs | sed 's;.*=;;' | tr '.' '-')
+
 #ホームディレクトリとホームディレクトリ以外なのか
 
 JAVA_VERSION=$1;shift;
@@ -10,6 +12,7 @@ APACHE_SOLR_VERSION=$1;shift;
 APACHE_SPARK_VERSION=$1;shift;
 HADOOP_VERSION=$1;shift;
 PYCHARM_VERSION=$1;shift;
+SWIFT_VERSION=$1;shift;
 
 DEFAULT_JAVA_VERSION=11
 DEFAULT_MAVEN_VERSION=3-6-3
@@ -20,6 +23,7 @@ DEFAULT_APACHE_SPARK_VERSION=3-0-0
 DEFAULT_HADOOP_VERSION=3-2
 DEFAULT_IDEA_VERSION=201-7846-76
 DEFAULT_PYCHARM_VERSION=2020-1-2
+DEFAULT_SWIFT_VERSION=5-2-4
 
 if [ -z $JAVA_VERSION ];then
   :
@@ -69,6 +73,21 @@ else
   DEFAULT_PYCHARM_VERSION=$PYCHARM_VERSION
 fi
 
+#ドット記法に変換
+
+OS_VERSION_DOT=$(echo $OS_VERSION | tr '-' '.')
+
+DEFAULT_JAVA_VERSION_DOT=$(echo $DEFAULT_JAVA_VERSION|tr '-' '.' )
+DEFAULT_MAVEN_VERSION_DOT=$(echo $DEFAULT_MAVEN_VERSION|tr '-' '.' )
+DEFAULT_GRADLE_VERSION_DOT=$(echo $DEFAULT_GRADLE_VERSION|tr '-' '.' )
+DEFAULT_GRAALVM_VERSION_DOT=$(echo $DEFAULT_GRAALVM_VERSION_DOT|tr '-' '.' )
+DEFAULT_APACHE_SOLR_VERSION_DOT=$(echo $DEFAULT_APACHE_SOLR_VERSION|tr '-' '.' )
+DEFAULT_APACHE_SPARK_VERSION_DOT=$(echo $DEFAULT_APACHE_SPARK_VERSION|tr '-' '.' )
+DEFAULT_HADOOP_VERSION_DOT=$(echo $DEFAULT_HADOOP_VERSION|tr '-' '.' )
+DEFAULT_IDEA_VERSION_DOT=$(echo $DEFAULT_IDEA_VERSION|tr '-' '.' )
+DEFAULT_PYCHARM_VERSION_DOT=$(echo $DEFAULT_PYCHARM_VERSION|tr '-' '.' )
+DEFAULT_SWIFT_VERSION_DOT=$(echo $DEFAULT_SWIFT_VERSION|tr '-' '.' )
+
 #使用するログインシェルの設定
 echo 'export SHELL=$(which bash)' >>$HOME/.bashrc
 
@@ -110,76 +129,43 @@ echo 'export CHROME_LINUX_HOME=/usr/local/src/chrome-linux' >>$HOME/.bashrc
 echo 'export PATH=$CHROME_LINUX_HOME:$PATH' >>$HOME/.bashrc
 echo 'export CHROME_DRIVER_HOME=/usr/local/src/chromedriver_linux64' >>$HOME/.bashrc
 echo 'export PATH=$CHROME_DRIVER_HOME:$PATH' >>$HOME/.bashrc
-
+#IOSないしアンドロイドなどのネイティブアプリ開発フルッター
 echo 'export FLUTTER_HOME=/usr/local/src/flutter' >> $HOME/.bashrc
 echo 'export PATH=$FLUTTER_HOME/bin:$PATH' >> $HOME/.bashrc
-
-
-
 #クロスコンパイルできるラスト
 echo 'export RUST_HOME=$HOME/.cargo' >>$HOME/.bashrc
 echo 'export PATH=$RUST_HOME/bin:$PATH' >>$HOME/.bashrc
-
+#IOSビルド
 echo 'export OSXCROSS_HOME=/usr/local/src/osxcross/target' >>$HOME/.bashrc
 echo 'export PATH=$OSXCROSS_HOME/bin:$PATH' >>$HOME/.bashrc
 
-#バージョン情報に影響されるパス設定 引数あれば上書きして設定
-echo "export JAVA_HOME=/usr/local/src/jdk-$(echo $DEFAULT_JAVA_VERSION|tr '-' '.' )" >> $HOME/.bashrc
+#バージョン情報ないしオペレーティング情報に影響されるパスの設定
+echo "export JAVA_HOME=/usr/local/src/jdk-$DEFAULT_JAVA_VERSION_DOT" >> $HOME/.bashrc
 echo 'export PATH=$JAVA_HOME/bin:$PATH' >> $HOME/.bashrc
-echo "export MAVEN_HOME=/usr/local/src/apache-maven-$(echo $DEFAULT_MAVEN_VERSION|tr '-' '.' )">>$HOME/.bashrc
+echo "export MAVEN_HOME=/usr/local/src/apache-maven-$DEFAULT_MAVEN_VERSION_DOT">>$HOME/.bashrc
 echo 'export PATH=$JAVA_HOME/bin:$PATH' >> $HOME/.bashrc
 echo 'export PATH=$MAVEN_HOME/bin:$PATH' >> $HOME/.bashrc
-echo "export APACHE_SOLR_HOME=/usr/local/src/solr-$(echo $DEFAULT_APACHE_SOLR_VERSION|tr '-' '.')" >>$HOME/.bashrc
+echo "export APACHE_SOLR_HOME=/usr/local/src/solr-$DEFAULT_APACHE_SOLR_VERSION_DOT" >>$HOME/.bashrc
 echo 'export PATH=$APACHE_SOLR_HOME/bin:$PATH' >>$HOME/.bashrc
-echo "export GRADLE_HOME=/usr/local/src/gradle-$(echo $DEFAULT_GRADLE_VERSION|tr '-' '.')">>$HOME/.bashrc
+echo "export GRADLE_HOME=/usr/local/src/gradle-$DEFAULT_GRADLE_VERSION_DOT">>$HOME/.bashrc
 echo 'export PATH=$GRADLE_HOME/bin:$PATH' >> $HOME/.bashrc
-echo "export APACHE_SPARK_HOME=/usr/local/src/spark-$DEFAULT_APACHE_SPARK_VERSION-preview2-bin-hadoop$DEFAULT_HADOOP_VERSION" >>$HOME/.bashrc
+echo "export APACHE_SPARK_HOME=/usr/local/src/spark-$DEFAULT_APACHE_SPARK_VERSION_DOT-preview2-bin-hadoop$DEFAULT_HADOOP_VERSION_DOT" >>$HOME/.bashrc
 echo 'export PATH=$APACHE_SPARK_HOME/bin:$APACHE_SPARK_HOME/sbin:$PATH' >>$HOME/.bashrc
-
-
-echo "export GRAALVM_HOME=/usr/local/src/graalvm-ce-java$(echo $DEFAULT_JAVA_VERSION|tr '-' '.' )-$(echo $DEFAULT_GRAALVM_VERSION|tr '-' '.' )" >>$HOME/.bashrc
+echo "export GRAALVM_HOME=/usr/local/src/graalvm-ce-java$DEFAULT_JAVA_VERSION_DOT-$DEFAULT_GRAALVM_VERSION_DOT" >>$HOME/.bashrc
 echo 'export PATH=$GRAALVM_HOME/bin:$PATH' >>$HOME/.bashrc
-
-
-#sdkman系
-echo "export SDKMAN_GRADLE_HOME=$HOME/.sdkman/candidates/gradle/$(echo $DEFAULT_GRADLE_VERSION|tr '-' '.')">>$HOME/.bashrc
+echo "export SDKMAN_GRADLE_HOME=$HOME/.sdkman/candidates/gradle/$DEFAULT_GRADLE_VERSION_DOT">>$HOME/.bashrc
 echo 'export PATH=$SDKMAN_GRADLE_HOME/bin:$PATH' >> $HOME/.bashrc
-
-
-#swift ハードでいいや
-echo 'export SWIFT_HOME=/usr/local/src/swift-5.2.4-RELEASE-ubuntu20.04/usr' >>$HOME/.bashrc
+echo "export SWIFT_HOME=/usr/local/src/swift-$DEFAULT_SWIFT_VERSION_DOT-RELEASE-ubuntu$OS_VERSION_DOT/usr" >>$HOME/.bashrc
 echo 'export PATH=$SWIFT_HOME/bin:$PATH' >>$HOME/.bashrc
-echo 'export LD_LIBRARY_PATH=/usr/local/src/swift-5.2.4-RELEASE-ubuntu20.04/usr/lib/swift/linux:$LD_LIBRARY_PATH' >>$HOME/.bashrc
-#cp /usr/local/src/swift-5.2.4-RELEASE-ubuntu20.04/usr/bin/sourcekit-lsp /usr/local/bin/sourcekit-lsp
-
-
-#エディタ系
-echo "alias idea=\"/usr/local/src/idea-IC-$(echo $DEFAULT_IDEA_VERSION|tr '-' '.')/bin/idea.sh >$HOME/launch-idea.log 2>&1 &\"" >> $HOME/.bashrc
-
-echo "alias pyc=\"bash /usr/local/src/pycharm-community-$(echo $DEFAULT_PYCHARM_VERSION|tr '-' '.')/bin/pycharm.sh 1>$HOME/launch-pycharm.log 2>&1 &\"" >>$HOME/.bashrc
-
-echo 'alias myb="mysql-workbench 1>$HOME/launch-mysql-bench.log 2>&1 &"' >>$HOME/.bashrc
-
-echo 'alias qtd="( mkdir -p $HOME/qt-wrksp && export XDG_RUNTIME_DIR=$HOME/qt-wrksp && cd /usr/lib/x86_64-linux-gnu/qt5/bin && ./designer 1>$HOME/launch-qt-designer.log 2>&1 </dev/null & )"' >>$HOME/.bashrc
-
+echo 'export LD_LIBRARY_PATH=$SWIFT_HOME/lib/swift/linux:$LD_LIBRARY_PATH' >>$HOME/.bashrc
+#cp $SWIFT_HOME/bin/sourcekit-lsp /usr/local/bin/sourcekit-lsp
 
 echo 'export ANDROID_STUDIO_HOME=/usr/local/src/android-studio' >> $HOME/.bashrc
 echo 'export PATH=$ANDROID_STUDIO_HOME/bin:$PATH' >> $HOME/.bashrc
-echo 'alias and="studio.sh 1>$HOME/launch-android-studio.log 2>&1 &"' >> $HOME/.bashrc
-
 
 #golangのIDE
 echo 'export LITEIDE_HOME=/usr/local/src/liteide' >> $HOME/.bashrc
 echo 'export PATH=$LITEIDE_HOME/bin:$PATH' >> $HOME/.bashrc
-
-
-
-#移動系
-echo 'alias repo="cd /usr/local/src/script-repo"' >> $HOME/.bashrc
-echo 'alias sskc="cd $HOME/script-sketch"' >> $HOME/.bashrc
-echo 'alias senv="cd $HOME/script-env"' >> $HOME/.bashrc
-echo 'alias scmd="cd $HOME/script-cmd"' >> $HOME/.bashrc
-echo 'alias sdat="cd $HOME/script-dat"' >> $HOME/.bashrc
 
 #優先度高いものほど下に追加
 echo 'export PATH=/usr/local/bin:$PATH' >>$HOME/.bashrc
