@@ -69,6 +69,10 @@ else
   DEFAULT_PYCHARM_VERSION=$PYCHARM_VERSION
 fi
 
+#Xアプリ転送先設定
+echo 'export DISPLAY=:0.0' >>$HOME/.bashrc
+
+
 #自作コマンドのパス
 #そのうち作ったこともいつものようにわすれてる
 echo 'export SCRIPT_CMD_HOME=$HOME/.local/script-cmd' >>$HOME/.bashrc
@@ -85,6 +89,10 @@ echo 'export CHROME_LINUX_HOME=/usr/local/src/chrome-linux' >>$HOME/.bashrc
 echo 'export PATH=$CHROME_LINUX_HOME:$PATH' >>$HOME/.bashrc
 echo 'export CHROME_DRIVER_HOME=/usr/local/src/chromedriver_linux64' >>$HOME/.bashrc
 echo 'export PATH=$CHROME_DRIVER_HOME:$PATH' >>$HOME/.bashrc
+
+echo 'export FLUTTER_HOME=/usr/local/src/flutter' >> $HOME/.bashrc
+echo 'export PATH=$FLUTTER_HOME/bin:$PATH' >> $HOME/.bashrc
+
 
 
 #クロスコンパイルできるラスト
@@ -145,9 +153,12 @@ echo 'export PATH=$LITEIDE_HOME/bin:$PATH' >> $HOME/.bashrc
 
 
 
-
 #移動系
 echo 'alias repo="cd /usr/local/src/script-repo"' >> $HOME/.bashrc
+echo 'alias sskc="cd $HOME/script-sketch"' >> $HOME/.bashrc
+echo 'alias senv="cd $HOME/script-env"' >> $HOME/.bashrc
+echo 'alias scmd="cd $HOME/script-cmd"' >> $HOME/.bashrc
+echo 'alias sdat="cd $HOME/script-dat"' >> $HOME/.bashrc
 
 #優先度高いものほど下に追加
 echo 'export PATH=/usr/local/bin:$PATH' >>$HOME/.bashrc

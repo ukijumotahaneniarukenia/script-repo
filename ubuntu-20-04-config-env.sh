@@ -69,6 +69,10 @@ else
   DEFAULT_PYCHARM_VERSION=$PYCHARM_VERSION
 fi
 
+#Xアプリ転送先設定
+echo 'export DISPLAY=:0.0' >>$HOME/.bashrc
+
+
 #自作コマンドのパス
 #そのうち作ったこともいつものようにわすれてる
 echo 'export SCRIPT_CMD_HOME=$HOME/.local/script-cmd' >>$HOME/.bashrc
