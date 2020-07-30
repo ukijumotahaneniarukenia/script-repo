@@ -77,8 +77,8 @@ echo 'export DISPLAY=:0.0' >>$HOME/.bashrc
 
 #ロケール
 echo 'export LANG=ja_JP.UTF-8' >>$HOME/.bashrc
-echo 'export LANGUAGE=ja_JP.UTF-8' >>$HOME/.bashrc
-echo 'export LC_ALL=ja_JP.UTF-8' >>$HOME/.bashrc
+#echo 'export LANGUAGE=ja_JP.UTF-8' >>$HOME/.bashrc
+#echo 'export LC_ALL=ja_JP.UTF-8' >>$HOME/.bashrc
 
 #IME (コンテナ上でibus安定したらそっちに変えたい)
 echo 'export GTK_IM_MODULE=ibus' >>$HOME/.bashrc
