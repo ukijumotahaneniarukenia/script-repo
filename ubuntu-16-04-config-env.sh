@@ -100,14 +100,14 @@ echo 'export LANG=ja_JP.UTF-8' >>$HOME/.bashrc
 #echo 'export LC_ALL=ja_JP.UTF-8' >>$HOME/.bashrc
 
 #IME (コンテナ上でibus安定したらそっちに変えたい)
-echo 'export GTK_IM_MODULE=ibus' >>$HOME/.bashrc
-echo 'export XMODIFIERS=@im=ibus' >>$HOME/.bashrc
-echo 'export QT_IM_MODULE=ibus' >>$HOME/.bashrc
+#echo 'export GTK_IM_MODULE=ibus' >>$HOME/.bashrc
+#echo 'export XMODIFIERS=@im=ibus' >>$HOME/.bashrc
+#echo 'export QT_IM_MODULE=ibus' >>$HOME/.bashrc
 
 #IME (コンテナホスト上でibus使用しているため、コンテナホストとコンテナゲストを棲み分けたい意味での設定)
-#echo 'export GTK_IM_MODULE=fcitx' >>$HOME/.bashrc
-#echo 'export XMODIFIERS=@im=fcitx' >>$HOME/.bashrc
-#echo 'export QT_IM_MODULE=fcitx' >>$HOME/.bashrc
+echo 'export GTK_IM_MODULE=fcitx' >>$HOME/.bashrc
+echo 'export XMODIFIERS=@im=fcitx' >>$HOME/.bashrc
+echo 'export QT_IM_MODULE=fcitx' >>$HOME/.bashrc
 
 #ヒストリの上限値設定
 echo 'export HISTSIZE=1000000' >>$HOME/.bashrc #オンメモリ
