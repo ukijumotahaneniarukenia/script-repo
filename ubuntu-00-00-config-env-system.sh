@@ -118,6 +118,10 @@ echo 'export HISTFILESIZE=1000000' >>$HOME/.bashrc #.bash_historyファイル
 echo 'export SCRIPT_CMD_HOME=$HOME/.local/script-cmd' >>$HOME/.bashrc
 echo 'export PATH=$SCRIPT_CMD_HOME/bin:$PATH'>>$HOME/.bashrc
 
+#自作検索系コマンドのパス
+echo 'export SCRIPT_SEARCH_HOME=$HOME/.local/script-search' >>$HOME/.bashrc
+echo 'export PATH=$SCRIPT_SEARCH_HOME/bin:$PATH'>>$HOME/.bashrc
+
 #バージョン情報に影響しないパス設定 便利
 echo 'export ELASTICSEARCH_HOME=/usr/share/elasticsearch'>>$HOME/.bashrc
 echo 'export PATH=$ELASTICSEARCH_HOME/bin:$PATH'>>$HOME/.bashrc
