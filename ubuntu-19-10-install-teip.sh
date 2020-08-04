@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cd /usr/local/src
+
 curl -sfSL --retry 5 https://git.io/teip-1.2.0.x86_64.deb -o teip.deb
 
 dpkg -i teip.deb

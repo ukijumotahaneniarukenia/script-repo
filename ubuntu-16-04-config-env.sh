@@ -80,7 +80,7 @@ OS_VERSION_DOT=$(echo $OS_VERSION | tr '-' '.')
 DEFAULT_JAVA_VERSION_DOT=$(echo $DEFAULT_JAVA_VERSION|tr '-' '.' )
 DEFAULT_MAVEN_VERSION_DOT=$(echo $DEFAULT_MAVEN_VERSION|tr '-' '.' )
 DEFAULT_GRADLE_VERSION_DOT=$(echo $DEFAULT_GRADLE_VERSION|tr '-' '.' )
-DEFAULT_GRAALVM_VERSION_DOT=$(echo $DEFAULT_GRAALVM_VERSION_DOT|tr '-' '.' )
+DEFAULT_GRAALVM_VERSION_DOT=$(echo $DEFAULT_GRAALVM_VERSION|tr '-' '.' )
 DEFAULT_APACHE_SOLR_VERSION_DOT=$(echo $DEFAULT_APACHE_SOLR_VERSION|tr '-' '.' )
 DEFAULT_APACHE_SPARK_VERSION_DOT=$(echo $DEFAULT_APACHE_SPARK_VERSION|tr '-' '.' )
 DEFAULT_HADOOP_VERSION_DOT=$(echo $DEFAULT_HADOOP_VERSION|tr '-' '.' )
@@ -117,6 +117,10 @@ echo 'export HISTFILESIZE=1000000' >>$HOME/.bashrc #.bash_historyファイル
 #そのうち作ったこともいつものようにわすれてる
 echo 'export SCRIPT_CMD_HOME=$HOME/.local/script-cmd' >>$HOME/.bashrc
 echo 'export PATH=$SCRIPT_CMD_HOME/bin:$PATH'>>$HOME/.bashrc
+
+#自作検索系コマンドのパス
+echo 'export SCRIPT_SEARCH_HOME=$HOME/.local/script-search' >>$HOME/.bashrc
+echo 'export PATH=$SCRIPT_SEARCH_HOME/bin:$PATH'>>$HOME/.bashrc
 
 #バージョン情報に影響しないパス設定 便利
 echo 'export ELASTICSEARCH_HOME=/usr/share/elasticsearch'>>$HOME/.bashrc
