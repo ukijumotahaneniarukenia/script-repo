@@ -162,6 +162,9 @@ echo 'export PATH=$SDKMAN_GRADLE_HOME/bin:$PATH' >> $HOME/.bashrc
 echo "export SWIFT_HOME=/usr/local/src/swift-$DEFAULT_SWIFT_VERSION_DOT-RELEASE-ubuntu$OS_VERSION_DOT/usr" >>$HOME/.bashrc
 echo 'export PATH=$SWIFT_HOME/bin:$PATH' >>$HOME/.bashrc
 echo 'export LD_LIBRARY_PATH=$SWIFT_HOME/lib/swift/linux:$LD_LIBRARY_PATH' >>$HOME/.bashrc
+echo 'export WATERFOX_HOME=/usr/local/src/waterfox-classic' >>$HOME/.bashrc
+echo 'export PATH=$WATERFOX_HOME:$PATH'  >>$HOME/.bashrc
+
 #cp $SWIFT_HOME/bin/sourcekit-lsp /usr/local/bin/sourcekit-lsp
 
 echo 'export ANDROID_STUDIO_HOME=/usr/local/src/android-studio' >> $HOME/.bashrc
