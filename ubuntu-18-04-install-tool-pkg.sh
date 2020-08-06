@@ -9,3 +9,5 @@ lsb-release \
 make \
 unzip \
 wget
+
+echo | apt install -y sudo
