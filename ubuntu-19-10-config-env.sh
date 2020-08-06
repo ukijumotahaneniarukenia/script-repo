@@ -164,6 +164,12 @@ echo 'export PATH=$SWIFT_HOME/bin:$PATH' >>$HOME/.bashrc
 echo 'export LD_LIBRARY_PATH=$SWIFT_HOME/lib/swift/linux:$LD_LIBRARY_PATH' >>$HOME/.bashrc
 echo 'export WATERFOX_HOME=/usr/local/src/waterfox-classic' >>$HOME/.bashrc
 echo 'export PATH=$WATERFOX_HOME:$PATH'  >>$HOME/.bashrc
+echo 'export IRON_HOME=/usr/share/iron' >>$HOME/.bashrc
+echo 'export PATH=$IRON_HOME:$PATH' >>$HOME/.bashrc
+
+#これを追加するとfirefoxがtor化する
+echo 'export TOR_BROWSER_HOME=$HOME/tor-browser_en-US/Browser' >>$HOME/.bashrc
+echo 'PATH=$TOR_BROWSER_HOME:$PATH' >>$HOME/.bashrc
 
 #cp $SWIFT_HOME/bin/sourcekit-lsp /usr/local/bin/sourcekit-lsp
 
