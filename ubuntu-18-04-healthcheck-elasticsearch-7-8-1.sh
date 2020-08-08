@@ -3,7 +3,7 @@
 SCRIPT_USER=$(whoami)
 HEALTH_CHECK_USER=elasticsearch
 
-if [ ${SCRIPT_USER} == ${LAUNCH_USER} ];then
+if [ ${SCRIPT_USER} == ${HEALTH_CHECK_USER} ];then
 
   lsof -i:9200 -P
 
@@ -13,6 +13,6 @@ if [ ${SCRIPT_USER} == ${LAUNCH_USER} ];then
 
 else
 
-  echo must be $LAUNCH_USER
+  echo must be $HEALTH_CHECK_USER
 
 fi

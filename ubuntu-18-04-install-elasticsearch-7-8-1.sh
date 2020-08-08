@@ -13,6 +13,10 @@ if [ ${SCRIPT_USER} == ${LAUNCH_USER} ];then
 
   chown -R elasticsearch:elasticsearch $HOME/*
 
+  elasticsearch --version
+
+  elasticsearch --help
+
 else
 
   echo must be $LAUNCH_USER
