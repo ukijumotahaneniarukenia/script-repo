@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
 SCRIPT_USER=$(whoami)
-LAUNCH_USER=elasticsearch
+HEALTH_CHECK_USER=elasticsearch
 
 if [ ${SCRIPT_USER} == ${LAUNCH_USER} ];then
 
-  cd $HOME
+  lsof -i:9200 -P
 
-  elasticsearch -d --verbose 1>$HOME/launch-elasticsearch.log 2>&1
+  ps auxwwf
+
+  curl http://localhost:9200
 
 else
 
