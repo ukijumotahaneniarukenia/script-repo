@@ -13,3 +13,11 @@ cd nim-1.2.4
 ./koch nimble
 
 ln -fsr /usr/local/src/nim-1.2.4/bin/nimble /usr/local/bin/nimble
+
+
+which nimble
+#/usr/local/bin/nimble
+
+readlink -f /usr/local/bin/nimble
+#/usr/local/src/nim-1.2.4/bin/nimble
+
