@@ -143,6 +143,10 @@ echo 'export PATH=$RUST_HOME/bin:$PATH' >>$HOME/.bashrc
 echo 'export OSXCROSS_HOME=/usr/local/src/osxcross/target' >>$HOME/.bashrc
 echo 'export PATH=$OSXCROSS_HOME/bin:$PATH' >>$HOME/.bashrc
 
+
+#choosenimで入れたときのnimパス
+echo 'export PATH=$HOME/.nimble/bin:$PATH' >>$HOME/.bashrc
+
 #バージョン情報ないしオペレーティング情報に影響されるパスの設定
 echo "export JAVA_HOME=/usr/local/src/jdk-$DEFAULT_JAVA_VERSION_DOT" >> $HOME/.bashrc
 echo 'export PATH=$JAVA_HOME/bin:$PATH' >> $HOME/.bashrc
