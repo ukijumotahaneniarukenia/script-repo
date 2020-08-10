@@ -7,8 +7,8 @@ git \
 gnupg \
 lsb-release \
 make \
+silversearcher-ag \
 unzip \
 wget
-
 
 echo | apt install -y sudo

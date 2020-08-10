@@ -7,6 +7,7 @@ git \
 gnupg \
 lsb-release \
 make \
+silversearcher-ag \
 unzip \
 wget
 
