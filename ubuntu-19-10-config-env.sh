@@ -13,6 +13,7 @@ APACHE_SPARK_VERSION=$1;shift;
 HADOOP_VERSION=$1;shift;
 PYCHARM_VERSION=$1;shift;
 SWIFT_VERSION=$1;shift;
+JSONSCHEMA2POJO_VERSION=$1;shift;
 
 DEFAULT_JAVA_VERSION=11
 DEFAULT_MAVEN_VERSION=3-6-3
@@ -24,6 +25,7 @@ DEFAULT_HADOOP_VERSION=3-2
 DEFAULT_IDEA_VERSION=201-7846-76
 DEFAULT_PYCHARM_VERSION=2020-1-2
 DEFAULT_SWIFT_VERSION=5-2-4
+DEFAULT_JSONSCHEMA2POJO_VERSION=1-0-2
 
 if [ -z $JAVA_VERSION ];then
   :
@@ -73,6 +75,13 @@ else
   DEFAULT_PYCHARM_VERSION=$PYCHARM_VERSION
 fi
 
+if [ -z $JSONSCHEMA2POJO_VERSION ];then
+  :
+else
+  DEFAULT_JSONSCHEMA2POJO_VERSION=$JSONSCHEMA2POJO_VERSION
+fi
+
+
 #ドット記法に変換
 
 OS_VERSION_DOT=$(echo $OS_VERSION | tr '-' '.')
@@ -87,6 +96,7 @@ DEFAULT_HADOOP_VERSION_DOT=$(echo $DEFAULT_HADOOP_VERSION|tr '-' '.' )
 DEFAULT_IDEA_VERSION_DOT=$(echo $DEFAULT_IDEA_VERSION|tr '-' '.' )
 DEFAULT_PYCHARM_VERSION_DOT=$(echo $DEFAULT_PYCHARM_VERSION|tr '-' '.' )
 DEFAULT_SWIFT_VERSION_DOT=$(echo $DEFAULT_SWIFT_VERSION|tr '-' '.' )
+DEFAULT_JSONSCHEMA2POJO_VERSION_DOT=$(echo $DEFAULT_JSONSCHEMA2POJO_VERSION|tr '-' '.' )
 
 #使用するログインシェルの設定
 echo 'export SHELL=$(which bash)' >>$HOME/.bashrc
@@ -142,6 +152,12 @@ echo 'export PATH=$RUST_HOME/bin:$PATH' >>$HOME/.bashrc
 #IOSビルド
 echo 'export OSXCROSS_HOME=/usr/local/src/osxcross/target' >>$HOME/.bashrc
 echo 'export PATH=$OSXCROSS_HOME/bin:$PATH' >>$HOME/.bashrc
+
+#ちょーべんり
+#jvm系言語でjsonbeanファイル作成時はマストアイテム
+#https://github.com/joelittlejohn/jsonschema2pojo
+echo "export JSONSCHEMA2POJO_HOME=/usr/local/src/jsonschema2pojo-$DEFAULT_JSONSCHEMA2POJO_VERSION_DOT" >>$HOME/.bashrc
+echo 'export PATH=$JSONSCHEMA2POJO_HOME/bin:$PATH' >> $HOME/.bashrc
 
 
 #choosenimで入れたときのnimパス
