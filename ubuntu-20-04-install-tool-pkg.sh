@@ -8,6 +8,7 @@ gnupg \
 lsb-release \
 make \
 silversearcher-ag \
+tree \
 unzip \
 wget
 
