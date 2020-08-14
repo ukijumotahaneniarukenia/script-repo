@@ -202,7 +202,7 @@ echo 'export PATH=$P4MERGE_HOME/bin:$PATH' >> $HOME/.bashrc
 
 #これを追加するとfirefoxがtor化する
 echo 'export TOR_BROWSER_HOME=$HOME/tor-browser_en-US/Browser' >>$HOME/.bashrc
-echo 'PATH=$TOR_BROWSER_HOME:$PATH' >>$HOME/.bashrc
+echo 'export PATH=$TOR_BROWSER_HOME:$PATH' >>$HOME/.bashrc
 
 #cp $SWIFT_HOME/bin/sourcekit-lsp /usr/local/bin/sourcekit-lsp
 
