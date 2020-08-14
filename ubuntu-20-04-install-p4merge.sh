@@ -4,6 +4,8 @@
 #ユーザー登録はしなくて大丈夫
 cd /usr/local/src
 
+chown -R root:root p4v.tgz
+
 tar xvf p4v.tgz
 
 which p4merge
