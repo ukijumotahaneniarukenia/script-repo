@@ -194,6 +194,12 @@ echo 'export PATH=$WATERFOX_HOME:$PATH'  >>$HOME/.bashrc
 echo 'export IRON_HOME=/usr/share/iron' >>$HOME/.bashrc
 echo 'export PATH=$IRON_HOME:$PATH' >>$HOME/.bashrc
 
+#git diff のGUIツールべんり
+echo 'export P4MERGE_HOME=/usr/local/src/p4v-2020.1.1966006' >> $HOME/.bashrc
+echo 'export PATH=$P4MERGE_HOME/bin:$PATH' >> $HOME/.bashrc
+
+
+
 #これを追加するとfirefoxがtor化する
 echo 'export TOR_BROWSER_HOME=$HOME/tor-browser_en-US/Browser' >>$HOME/.bashrc
 echo 'PATH=$TOR_BROWSER_HOME:$PATH' >>$HOME/.bashrc
