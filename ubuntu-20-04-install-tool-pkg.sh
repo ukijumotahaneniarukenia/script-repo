@@ -7,6 +7,7 @@ git \
 gnupg \
 lsb-release \
 make \
+peco \
 silversearcher-ag \
 tree \
 unzip \
