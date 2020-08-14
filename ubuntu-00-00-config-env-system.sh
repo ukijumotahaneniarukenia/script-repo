@@ -153,6 +153,13 @@ echo 'export PATH=$RUST_HOME/bin:$PATH' >>$HOME/.bashrc
 echo 'export OSXCROSS_HOME=/usr/local/src/osxcross/target' >>$HOME/.bashrc
 echo 'export PATH=$OSXCROSS_HOME/bin:$PATH' >>$HOME/.bashrc
 
+
+#べんり
+#jvm系言語でxmlbeanファイル作成時はマストアイテム
+#https://javaee.github.io/jaxb-v2/
+echo 'JAXB-RI_HOME=/usr/local/src/jaxb-ri' >> $HOME/.bashrc
+echo 'PATH=$JAXB-RI_HOME/bin:$PATH' >> $HOME/.bashrc
+
 #ちょーべんり
 #jvm系言語でjsonbeanファイル作成時はマストアイテム
 #https://github.com/joelittlejohn/jsonschema2pojo
