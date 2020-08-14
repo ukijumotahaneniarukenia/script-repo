@@ -55,3 +55,36 @@ java --module-path "${JAXB_PATH}" -m com.sun.tools.xjc/com.sun.tools.xjc.XJCFaca
 EOS
 
 chmod 755 /usr/local/src/jaxb-ri/bin/xjc.sh
+
+#エントリシェルを以下のように新規作成
+#javax.activationを追加しておく
+
+cp /usr/local/src/jaxb-ri/bin/schemagen.sh /usr/local/src/jaxb-ri/bin/schemagen.sh.bak
+
+
+cat <<EOS > /usr/local/src/jaxb-ri/bin/schemagen.sh
+#!/usr/bin/env bash
+
+JAXB_HOME=/usr/local/src/jaxb-ri
+
+JAXB_PATH=${JAXB_HOME}/mod/jaxb-api.jar:\
+${JAXB_HOME}/mod/jaxb-jxc.jar:\
+${JAXB_HOME}/mod/jaxb-xjc.jar:\
+${JAXB_HOME}/mod/jaxb-runtime.jar:\
+${JAXB_HOME}/mod/stax-ex.jar:\
+${JAXB_HOME}/mod/istack-commons-runtime.jar:\
+${JAXB_HOME}/mod/istack-commons-tools.jar:\
+${JAXB_HOME}/mod/FastInfoset.jar:\
+${JAXB_HOME}/mod/dtd-parser.jar:\
+${JAXB_HOME}/mod/rngom.jar:\
+${JAXB_HOME}/mod/codemodel.jar:\
+${JAXB_HOME}/mod/xsom.jar:\
+${JAXB_HOME}/mod/txw2.jar:\
+${JAXB_HOME}/mod/relaxng-datatype.jar:\
+${JAXB_HOME}/mod/javax.activation.jar:\
+${JAXB_HOME}/mod/javax.activation-1.2.0.jar
+
+java --module-path "${JAXB_PATH}" -m com.sun.tools.jxc/com.sun.tools.jxc.SchemaGeneratorFacade "$@"
+EOS
+
+chmod 755 /usr/local/src/jaxb-ri/bin/schemagen.sh
