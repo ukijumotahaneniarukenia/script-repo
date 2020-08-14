@@ -28,6 +28,8 @@ curl -sSLO https://repo1.maven.org/maven2/com/sun/activation/javax.activation/1.
 #エントリシェルを以下のように新規作成
 #javax.activationを追加しておく
 
+cp /usr/local/src/jaxb-ri/bin/xjc.sh /usr/local/src/jaxb-ri/bin/xjc.sh.bak
+
 cat <<EOS > /usr/local/src/jaxb-ri/bin/xjc.sh
 #!/usr/bin/env bash
 
