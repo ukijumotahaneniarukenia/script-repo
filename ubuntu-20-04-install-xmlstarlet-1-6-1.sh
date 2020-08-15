@@ -11,11 +11,14 @@ cd xmlstarlet-1.6.1
 
 apt install -y libxml2-dev libxslt1-dev
 
-#./configure && \
-#make -j12 && \
-#make -j12 install
-#
-#which xml
+#18-04とちがうところ
+#インクルードディレクトリを手動で設定する必要があった
+
+./configure --with-libxslt-include-prefix=$(pkg-config --cflags libxml-2.0 | sed 's/-I//') && \
+make -j12 && \
+make -j12 install
+
+which xml
 #/usr/local/bin/xml
 
 #$ xml --help
