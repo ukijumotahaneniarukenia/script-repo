@@ -11,6 +11,7 @@ peco \
 silversearcher-ag \
 tree \
 unzip \
-wget
+wget \
+xsel
 
 echo | apt install -y sudo
