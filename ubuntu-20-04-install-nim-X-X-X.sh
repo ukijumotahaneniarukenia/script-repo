@@ -6,6 +6,10 @@
 #io.nim(706)              writeFile
 #Error: unhandled exception: cannot open: /tmp/nimblecache/nimscriptapi.nim [IOError]
 
+
+#dockerコンテナ環境のubuntu-20-04ではインストールできたがnvimのlspでは安定しなかった
+#18-04で安定しているのでそっちつかう
+
 #たまにコケるときは以下のファイルを削除するなど
 #sudo rm /tmp/nimblecache/nimscriptapi.nim
 #sudo rm /tmp/choosenim-0.6.0_linux_amd64
