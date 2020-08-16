@@ -6,10 +6,6 @@
 #io.nim(706)              writeFile
 #Error: unhandled exception: cannot open: /tmp/nimblecache/nimscriptapi.nim [IOError]
 
-
-#dockerコンテナ環境のubuntu-20-04ではインストールできたがnvimのlspでは安定しなかった
-#18-04で安定しているのでそっちつかう
-
 #たまにコケるときは以下のファイルを削除するなど
 #sudo rm /tmp/nimblecache/nimscriptapi.nim
 #sudo rm /tmp/choosenim-0.6.0_linux_amd64
@@ -23,3 +19,28 @@ choosenim stable
 #プロンプトあるので、yesと答える
 #https://github.com/PMunch/nimlsp
 nimble install nimlsp
+
+#正常にインストールできたが、nvimの補完が効かず苦しんでいるときは以下の方法をためす
+#やけにセグフォルなど
+
+#nvim a.nimのように開かず、
+#
+#nvimとしてひらき、
+#
+#cat <<EOS
+#import algorithm
+#
+#
+#var a = [1,2,3,4]
+#
+#
+#echo a
+#
+#
+#echo a.reversed
+#EOS
+#
+#と入力してから、
+#
+#nvim a.nimとして開くといい感じになった
+
