@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+#dockerホスト環境のubuntu-20-04ではインストールできなかった
+#$ nimble install nimlsp
+#Downloading https://github.com/PMunch/nimlsp using git
+#io.nim(706)              writeFile
+#Error: unhandled exception: cannot open: /tmp/nimblecache/nimscriptapi.nim [IOError]
 
 #たまにコケるときは以下のファイルを削除するなど
 #sudo rm /tmp/nimblecache/nimscriptapi.nim
