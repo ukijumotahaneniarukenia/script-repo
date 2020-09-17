@@ -9,7 +9,7 @@ tar xvf xmlstarlet-1.6.1.tar.gz
 
 cd xmlstarlet-1.6.1
 
-apt install -y libxml2-dev libxslt1-dev
+apt install -y libxml2-dev libxslt1-dev apt-utils
 
 #./configure && \
 #make -j12 && \
