@@ -104,6 +104,9 @@ echo 'export SHELL=$(which bash)' >>$HOME/.bashrc
 #Xアプリ転送先設定
 echo 'export DISPLAY=:0.0' >>$HOME/.bashrc
 
+#アプリ側でデフォルトで使用するエディタの設定
+echo 'export EDITOR=/usr/local/bin/vim' >>$HOME/.bashrc
+
 #ロケール
 echo 'export LANG=ja_JP.UTF-8' >>$HOME/.bashrc
 #echo 'export LANGUAGE=ja_JP.UTF-8' >>$HOME/.bashrc
