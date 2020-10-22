@@ -156,6 +156,8 @@ echo 'export PATH=$RUST_HOME/bin:$PATH' >>$HOME/.bashrc
 echo 'export OSXCROSS_HOME=/usr/local/src/osxcross/target' >>$HOME/.bashrc
 echo 'export PATH=$OSXCROSS_HOME/bin:$PATH' >>$HOME/.bashrc
 
+#firebaseコマンドラインツール
+echo 'export PATH=/usr/local/src/fuego-bin:$PATH' >>$HOME/.bashrc
 
 #べんり
 #jvm系言語でxmlbeanファイル作成時はマストアイテム
