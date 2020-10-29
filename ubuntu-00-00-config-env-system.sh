@@ -159,6 +159,10 @@ echo 'export PATH=$OSXCROSS_HOME/bin:$PATH' >>$HOME/.bashrc
 #firebaseコマンドラインツール
 echo 'export PATH=/usr/local/src/fuego-bin:$PATH' >>$HOME/.bashrc
 
+#ディスク情報をエンリッチに確認できるコマンド
+#https://github.com/muesli/duf
+echo 'export PATH=/usr/local/src/duf-bin:$PATH' >>$HOME/.bashrc
+
 #べんり
 #jvm系言語でxmlbeanファイル作成時はマストアイテム
 #https://javaee.github.io/jaxb-v2/
