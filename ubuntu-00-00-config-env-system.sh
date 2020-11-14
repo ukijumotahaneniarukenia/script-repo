@@ -155,6 +155,9 @@ echo 'export PATH=$RUST_HOME/bin:$PATH' >>$HOME/.bashrc
 #IOSビルド
 echo 'export OSXCROSS_HOME=/usr/local/src/osxcross/target' >>$HOME/.bashrc
 echo 'export PATH=$OSXCROSS_HOME/bin:$PATH' >>$HOME/.bashrc
+#Telegram
+echo 'export TELEGRAM_HOME=/usr/local/src/Telegram' >>$HOME/.bashrc
+echo 'export PATH=$TELEGRAM_HOME:$PATH' >>$HOME/.bashrc
 
 #firebaseコマンドラインツール
 echo 'export PATH=/usr/local/src/fuego-bin:$PATH' >>$HOME/.bashrc
