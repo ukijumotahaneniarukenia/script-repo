@@ -161,6 +161,7 @@ echo 'export PATH=$TELEGRAM_HOME:$PATH' >>$HOME/.bashrc
 
 #firebaseコマンドラインツール
 echo 'export PATH=/usr/local/src/fuego-bin:$PATH' >>$HOME/.bashrc
+echo 'export PATH=/usr/local/src/fsrpl-bin:$PATH' >>$HOME/.bashrc
 
 #ディスク情報をエンリッチに確認できるコマンド
 #https://github.com/muesli/duf
