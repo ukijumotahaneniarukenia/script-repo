@@ -179,6 +179,9 @@ echo 'export PATH=$JAXB_RI_HOME/bin:$PATH' >> $HOME/.bashrc
 echo "export JSONSCHEMA2POJO_HOME=/usr/local/src/jsonschema2pojo-$DEFAULT_JSONSCHEMA2POJO_VERSION_DOT" >>$HOME/.bashrc
 echo 'export PATH=$JSONSCHEMA2POJO_HOME/bin:$PATH' >> $HOME/.bashrc
 
+#Postman
+echo 'export POSTMAN_HOME=/usr/local/src/Postman-Agent' >>$HOME/.bashrc
+echo 'export PATH=$POSTMAN_HOME/app:$PATH' >>$HOME/.bashrc
 
 #choosenimで入れたときのnimパス
 echo 'export PATH=$HOME/.nimble/bin:$PATH' >>$HOME/.bashrc
