@@ -11,3 +11,6 @@ tar xvf 'Postman Agent-linux-x64-0.2.4.tar.gz'
 mv '/usr/local/src/Postman Agent' /usr/local/src/Postman-Agent
 
 mv '/usr/local/src/Postman-Agent/app/Postman Agent' /usr/local/src/Postman-Agent/app/Postman-Agent
+
+#$ Postman-Agent 1>$HOME/launch-postman.log 2>&1 &
+#[1] 1439745
