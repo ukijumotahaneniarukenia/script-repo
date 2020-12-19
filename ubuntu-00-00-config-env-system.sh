@@ -214,7 +214,10 @@ echo 'export PATH=$IRON_HOME:$PATH' >>$HOME/.bashrc
 echo 'export P4MERGE_HOME=/usr/local/src/p4v-2020.1.1966006' >> $HOME/.bashrc
 echo 'export PATH=$P4MERGE_HOME/bin:$PATH' >> $HOME/.bashrc
 
-
+#nodejsでいいかと思ったがいれてみるとやっぱ便利
+#/usr/local/src/RunJS/RunJS-1.12.2.AppImage 1>$HOME/launch-RunJS.log 2>&1 &
+echo 'export RUNJS_HOME=/usr/local/src/RunJS' >> $HOME/.bashrc
+echo 'export PATH=$RUNJS_HOME:$PATH' >> $HOME/.bashrc
 
 #これを追加するとfirefoxがtor化する
 echo 'export TOR_BROWSER_HOME=$HOME/tor-browser_en-US/Browser' >>$HOME/.bashrc
