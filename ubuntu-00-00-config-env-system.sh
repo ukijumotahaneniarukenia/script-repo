@@ -158,6 +158,9 @@ echo 'export PATH=$OSXCROSS_HOME/bin:$PATH' >>$HOME/.bashrc
 #Telegram
 echo 'export TELEGRAM_HOME=/usr/local/src/Telegram' >>$HOME/.bashrc
 echo 'export PATH=$TELEGRAM_HOME:$PATH' >>$HOME/.bashrc
+#deno
+echo 'export DENO_HOME=$HOME/.deno' >>$HOME/.bashrc
+echo 'export PATH=$DENO_HOME/bin:$PATH'>>$HOME/.bashrc
 
 #firebaseコマンドラインツール
 echo 'export PATH=/usr/local/src/fuego-bin:$PATH' >>$HOME/.bashrc
