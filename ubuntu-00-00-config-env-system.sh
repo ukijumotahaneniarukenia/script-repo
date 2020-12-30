@@ -81,6 +81,9 @@ else
   DEFAULT_JSONSCHEMA2POJO_VERSION=$JSONSCHEMA2POJO_VERSION
 fi
 
+# 端末エミュレータごとのコマンド履歴を共有化
+echo 'export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"' >>$HOME/.bashrc
+echo 'shopt -u histappend' >>$HOME/.bashrc
 
 #ドット記法に変換
 
