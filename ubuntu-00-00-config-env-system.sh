@@ -165,6 +165,11 @@ echo 'export PATH=$TELEGRAM_HOME:$PATH' >>$HOME/.bashrc
 echo 'export DENO_HOME=$HOME/.deno' >>$HOME/.bashrc
 echo 'export PATH=$DENO_HOME/bin:$PATH'>>$HOME/.bashrc
 
+#json2toml json2yamlなどいろいろ便利
+#https://github.com/caltechlibrary/datatools
+echo 'export DATATOOLS_HOME=/usr/local/src/datatools' >>$HOME/.bashrc
+echo 'export PATH=$DATATOOLS_HOME/bin:$PATH' >>$HOME/.bashrc
+
 #firebaseコマンドラインツール
 echo 'export PATH=/usr/local/src/fuego-bin:$PATH' >>$HOME/.bashrc
 echo 'export PATH=/usr/local/src/fsrpl-bin:$PATH' >>$HOME/.bashrc
