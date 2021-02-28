@@ -231,7 +231,7 @@ echo 'export RUNJS_HOME=/usr/local/src/RunJS' >> $HOME/.bashrc
 echo 'export PATH=$RUNJS_HOME:$PATH' >> $HOME/.bashrc
 #便利 https://responsively.app/
 #/usr/local/src/ResponsivelyApp-0.15.0.AppImage 1>$HOME/launch-ResponsivelyApp.log 2>&1 &
-echo 'export RESPONSIVELYAPP_HOME=/usr/local/src/ResponsivelyApp' >> $HOME/.bashrc
+echo 'export RESPONSIVELYAPP_HOME=/usr/local/src/ResponsivelyApp-0.15.0.AppImage' >> $HOME/.bashrc
 echo 'export PATH=$RESPONSIVELYAPP_HOME:$PATH' >> $HOME/.bashrc
 
 #これを追加するとfirefoxがtor化する
