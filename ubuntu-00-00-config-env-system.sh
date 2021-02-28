@@ -230,9 +230,8 @@ echo 'export PATH=$P4MERGE_HOME/bin:$PATH' >> $HOME/.bashrc
 echo 'export RUNJS_HOME=/usr/local/src/RunJS' >> $HOME/.bashrc
 echo 'export PATH=$RUNJS_HOME:$PATH' >> $HOME/.bashrc
 #便利 https://responsively.app/
-#/usr/local/src/ResponsivelyApp-0.15.0.AppImage 1>$HOME/launch-ResponsivelyApp.log 2>&1 &
-echo 'export RESPONSIVELYAPP_HOME=/usr/local/src/ResponsivelyApp-0.15.0.AppImage' >> $HOME/.bashrc
-echo 'export PATH=$RESPONSIVELYAPP_HOME:$PATH' >> $HOME/.bashrc
+echo 'export RESPONSIVELYAPP_HOME=/usr/local/src/ResponsivelyApp' >> $HOME/.bashrc
+echo 'export PATH=$RESPONSIVELYAPP_HOME/ResponsivelyApp-0.15.0.AppImage:$PATH' >> $HOME/.bashrc
 
 #これを追加するとfirefoxがtor化する
 echo 'export TOR_BROWSER_HOME=$HOME/tor-browser_en-US/Browser' >>$HOME/.bashrc
